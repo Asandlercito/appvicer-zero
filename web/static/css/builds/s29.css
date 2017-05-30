@@ -1,0 +1,30 @@
+.cf {
+  zoom: 1;
+}
+.cf:after,
+.cf:before {
+  content: "";
+  display: table;
+}
+.cf:after {
+  clear: both;
+}
+.wrapper {
+  margin-top: 76px;
+}
+.b29 p {
+  text-align: justify;
+}
+.b29-title {
+  font-size: 20px;
+  color: #004998;
+  margin-top: 60px;
+}
+.b29-texto {
+  font-family: Arial;
+  font-size: 15px;
+  color: #88868b;
+  line-height: 2;
+  margin-bottom: 60px;
+  text-align: justify;
+}

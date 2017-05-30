@@ -1,0 +1,102 @@
+.b28	
+	.g-tittle h3
+		color white
+		&:before
+			background-color white
+
+.b11-tittle 
+	text-align center
+	font-size 28px
+	padding-top 35px
+	h3:before
+		width 60px
+		margin-bottom -5px
+.b11-parrafo
+	p
+		margin-top 25px
+		color #89878C
+		font-family t-10
+		line-height 24px
+.b11-wrapper
+	position relative
+	margin-top 50px
+	color white
+.b11-wrapper-color
+	position absolute
+	left 0
+	right 0
+	bottom 0
+	top 0
+	font-size: 0
+	z-index 1
+	&:before,
+	&:after
+		content ""
+		width 50%
+		height 100%
+		display inline-block
+	&:after
+		background-color c-1
+	&:before
+		background-color #2388E2
+.b11-wrapper-texto
+	z-index 2
+	position relative
+	font-size 0
+.b11-block
+	display inline-block
+	width 50%
+	vertical-align top
+	box-sizing border-box
+	.g-tittle h3
+		color white
+		margin-bottom 15px
+	p
+		padding 0px 25px 25px 25px
+		line-height 18px
+		font-family t-10
+		line-height 24px
+		text-align justify
+		font-size 14px
+		color white
+
+.b11
+	.g-tittle h3:before
+		margin-bottom:-5px
+		width 40px  
+		
+@media screen and (max-width:768px)
+
+	.b11-wrapper-color
+		&:after
+			display none
+			content none
+			
+		&:before
+			display none
+			content none
+			
+	.b11-block
+		display block
+		width 100%
+		background-color c-1
+		&:first-child
+			background-color c-8
+	.b11-wrapper
+		.wancho
+			width 100%
+	.b11-block
+		padding 0px 15px 25px 15px
+		p
+			&:last-child 
+				margin 0 0 0 1px
+		
+@media screen and (max-width 480px)
+	// .b11
+	// 	text-align center
+	.b11-block
+		padding 0px 0px 0px 0px
+		p
+			text-align justify
+			margin 0
+			

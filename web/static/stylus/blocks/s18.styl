@@ -1,0 +1,128 @@
+.b18
+	margin 20px 0
+
+.b18-galeria
+	font-size 0
+
+.b18-figura
+	width 23%
+	margin-left 1.5%
+	position relative
+	display inline-block
+	vertical-align top
+	img
+		img-res()
+	&.b18-figuramas
+		width 51%
+		margin-left:  0
+	@media screen and (min-width 1024px)	
+		&:hover
+			.b18-fondo
+				opacity 1
+				width 100%
+				height 100%
+			.b18-icon
+				bottom 0
+
+.b18-fondo
+	position absolute
+	width 100%
+	height 100%
+	background-color: rgba(31, 19, 15,0.8)
+	opacity 0
+	bottom 0
+	top 0
+	transition-all()
+	&:before
+		content ""
+		border-left 1px solid white
+		border-top 1px solid white
+		position absolute
+		width 16%
+		top 11%
+		left 3%
+		height 26%
+		opacity 0.5
+	&:after
+		content ""
+		border-right 1px solid white
+		border-bottom 1px solid white
+		position absolute
+		width 16%
+		right  6%
+		height 26%
+		bottom 7%
+		opacity 0.5
+	.b18-icon
+		width 72px
+		height 72px
+		text-align center
+		line-height  72px
+		border-radius 50%
+		position absolute
+		background #67c3ef
+		font-size:  38px
+		color white
+		margin auto
+		bottom -220px
+		right 0
+		left 0
+		top 0
+		transform rotate(45deg)
+		transition-all()
+
+.b18-pequeñosimg
+	margin-top 20px
+	font-size 0
+	.tres
+		width 32.3333333%
+		position relative
+		display inline-block
+		vertical-align top
+		img
+			img-res()
+		&:first-child
+			margin-left: 0
+
+@media screen and (max-width 1024px)
+	.b18-fondo
+		width 27%
+		height 26%
+		bottom 0
+		right 0
+		top 74%
+		opacity 1
+		&:before
+			left 8%
+	
+	.b18-fondo .b18-icon
+		width: 32px
+		height 32px
+		line-height: 32px
+		font-size: 20px
+		bottom 0
+
+@media screen and (max-width 640px)
+	.b18-figura.b18-figuramas
+		width 100%
+
+	.b18-figura
+		width 100%
+		margin-left 0
+		margin-top 10px
+		img
+			width 100%
+
+	.b18-pequeñosimg .tres
+		width 100%
+
+	.b18-pequeñosimg
+		margin-top 0
+		
+@media screen and (max-width 480px)
+	.b18-fondo
+		width 100%
+		background transparent
+		&:before,
+		&:after
+			display none

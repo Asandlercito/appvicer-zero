@@ -1,0 +1,119 @@
+<header class="header">
+
+    <div class="header-form-content">
+        <div class="wancho ">
+            <form>
+                <div class="header-input">
+                    <input class="validate[required]" type="text" name="busqueda" id="busqueda" placeholder="¿Que deseas buscar?">
+                    <button class="btn-search-buscador">BUSCAR</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <div class="wancho header-ctn">
+        <div class="header-box">
+            <a href="{{ path('dt-home') }}" class="header-logo">
+                <img src="{{ asset('static_dt/media/logo-cpal-instituto.png') }}" alt="">
+            </a>
+        </div>
+        <nav class="menu">
+            <div class="menu-wrap">
+                {% set seo_route = app.request.attributes.get('_route') %}
+
+                <ul class="menu-list"> <!-- "menu-list" es usado para el menu responsive -->
+                    <li class="menu-item no-mobile">
+                        <a href="{{ path('somosDt') }}" class="{% if 'somosDt' in seo_route|lower %}menu-link active{% else %}menu-link{% endif %}">Acerca de</a>
+                    </li>
+                    <li class="menu-item no-mobile">
+                        <a href="{{ path('dt-diagnostico') }}" class="{% if 'dt-diagnostico' in seo_route|lower %}menu-link active{% else %}menu-link{% endif %}">Diagnóstico</a>
+                    </li>
+                    <li class="menu-item no-mobile">
+                        <a href="{{ path('dt-tratamiento') }}" class="{% if 'dt-tratamiento' in seo_route|lower %}menu-link active{% else %}menu-link{% endif %}">Tratamiento</a>
+                    </li>
+                    <li class="menu-item no-mobile">
+                        <a href="{{ path('dt-talleres' , {'slug': primerTaller }) }}" class="{% if 'dt-talleres' in seo_route|lower %}menu-link active{% else %}menu-link{% endif %}">Talleres</a>
+                    </li>
+                    <li class="menu-item no-mobile">
+                        <a href="{{ path('dt-despistajes' , { 'slug' : despistajes[0].slug }) }}" class="{% if 'dt-despistaje' in seo_route|lower %}menu-link active{% else %}menu-link{% endif %}">Despistajes</a>
+                        }
+                    </li>
+                    <li class="menu-item no-mobile no-tablet">
+                        <a href="{{ path('dt-contacto') }}" class="{% if 'dt-contacto' in seo_route|lower %}menu-link active{% else %}menu-link{% endif %}">Contáctanos</a>
+                    </li>
+                    <li class="menu-item no-mobil">
+                        <a href="" class="menu-link icon-lupa lupa icon noafter"></a>
+                    </li>
+                    <li class="menu-item no-mobil">
+                        <a href="{{ path('home') }}" class="menu-link icon-CASA-nuevo  icon noafter"></a>
+                    </li>
+                    <li class="menu-item">
+                        <a href="" class="menu-link  icon hamburguesa no-mobil">
+                            <span class="icon-oc"></span>
+                        </a>
+                        <div class="submenu">
+                            <div class="wancho">
+                                <ul class="">
+                                    <li>
+                                        <a href="{{ path('dt-diagnostico') }}#señales-alerta">Señales de Alerta</a>
+                                    </li>
+                                    <li>
+                                        <a href="{{ path('blog') }}">Artículos</a>
+                                    </li>
+                                    <li>
+                                        <a href="{{ path('somosDt') }}#especialistas">Especialistas</a>
+                                    </li>
+                                    <li>
+                                        <a href="{{ path('noticias') }}">Noticias</a>
+                                    </li>
+                                    <li>
+                                        <a href="{{ path('eventos') }}">Eventos</a>
+                                    </li>
+                                </ul>
+                                <ul class="recursos">
+                                    <li class="no-mobil">
+                                        <a href="">Recursos</a>
+                                    </li>
+                                    <li>
+                                        <a href="" class="header-boton" target="_blank">
+                                            Aula Virtual
+                                        </a>
+                                        <a href="{{ infodt.intranet }}" class="header-boton" target="_blank">
+                                            Intranet
+                                        </a>
+                                        <a href="{{ info.bibliotecaLink }}" class="header-boton" target="_blank">
+                                            Biblioteca
+                                        </a>
+                                    </li>
+                                    <li class="header-redes-box">
+                                        <p class="mr no-mobil">
+                                            Síguenos
+                                        </p>
+                                        <a href="{{ infodt.twitter }}" class="header-redes" target="_blank">
+                                            <span class="icon-twitter"></span>
+                                        </a>
+                                        <a href="{{ infodt.facebook }}" class="header-redes" target="_blank">
+                                            <span class="icon-fb"></span>
+                                        </a>
+                                        <a href="{{ infodt.youtube }}" class="header-redes" target="_blank">
+                                            <span class="icon-youtube2"></span>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </div>
+
+    <div  class="menu-mobile-open icon-menu"></div>
+
+</header>
+<div class="header-cita">
+    <a href="/diagnostico-y-tratamiento/contacto">
+        <strong>Solicitar</strong> <br>
+        Cita
+    </a>
+</div>

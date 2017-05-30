@@ -1,0 +1,48 @@
+.b15
+	margin-top 38px
+	.wancho
+		position relative
+	.g-tittle
+		margin-bottom 80px
+.b15-left
+	margin-right 350px
+	min-height 300px
+.b15-nombre
+	position relative
+	h3
+		font-family t-0
+		font-size 24px
+		color #004998
+		&:before
+			content ""
+			height 2px
+			width 48px
+			position absolute
+			background-color #43baf3
+			bottom -10px
+.b15-parrafo
+	margin-top 25px
+	p
+		font-family  t-9
+		font-size 14px
+		color #89878c
+		line-height 2
+		text-align justify
+.b15-right
+	position absolute
+	right 0
+	top -30px
+.b15-imagen
+	border 5px solid #43baf3
+	border-radius 100%
+	box-sizing border-box
+
+@media screen and (max-width 640px)
+	.b15-left
+		margin-right 0
+		min-height inherit
+	.b15-right
+		position static
+		text-align center
+	.b15-nombre
+		text-align center

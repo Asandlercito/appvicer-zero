@@ -1,0 +1,212 @@
+.footer
+	background c-1
+	padding-top 40px
+	color white
+	
+.footer-img
+	margin-bottom 40px
+	text-align center
+	max-width 316px
+	img
+		img-res()
+	
+.footer-items
+	font-size 0
+
+.footer-item
+	width 21%
+	text-align left
+	display inline-block
+	vertical-align top
+	margin 0 15px
+	li
+		font-family t-9
+	&:last-child
+		margin-rigth 0
+		
+.footer-list
+	margin-bottom 40px
+	&.libro
+		height 110px
+	.libro-recla
+		font-family t-9
+		font-size 12px
+		transition-all()
+		&:hover
+			color c-2
+	span 
+		display inline-block
+		font-size 50px
+		margin-left 40px
+		margin-bottom 8px
+.footer-correo, .footer-telf
+	transition-all()
+	&:hover
+		color c-2
+
+.footer-list-title
+	font-family t-8
+	font-size 14px
+	color c-2
+	h4
+		font-size inherit
+
+.footer-list-box
+	a
+		display inline-block
+		margin-bottom 5px
+		font-size 11px
+		transition-all()
+		&:hover
+			color c-2
+
+.footer-datos
+	.telefonos
+		.footer-direccion
+			&:before
+				content "\e916"
+				top 0
+				font-size 30px
+	.email
+		.footer-direccion
+			&:before
+				content "\e904"
+				top 0
+				font-size 25px
+
+.footer-direccion-box
+	display inline-block
+	vertical-align middle
+	span 
+		display inline-block
+		vertical-align middle
+
+
+.footer-direccion
+	font-size 12px
+	font-family t-9
+	position relative
+	padding-left 45px
+	padding-bottom 10px
+	&:before
+		content "\e919"
+		font-family icomoon
+		font-size 32px
+		color white
+		position absolute
+		top 12px
+		left 0
+		
+
+.footer-direccion-title
+	font-size 14px
+	text-transform uppercase
+	font-family t-8
+	margin-bottom 6px
+	transition-all()
+	&:hover
+		color c-2
+
+.footer-redes
+	text-align center
+	font-size 30px
+	margin-top 5px
+	a
+		display inline-block
+		margin 0 8px
+		transition-all()
+		&:hover
+			color c-2
+
+		
+// creditos
+.footer-copy
+	font-size 13px
+	text-align center
+	padding 20px
+	background white
+	color c-1
+	p
+		margin-bottom 0
+
+@media screen and (max-width 1018px)
+	.footer
+		text-align center
+	.footer-item
+		width 35%
+
+@media screen and (max-width 768px)
+	.footer
+		text-align center
+	.footer-item
+		width 41%
+		
+@media screen and (max-width 480px)
+	.footer
+		padding-top 15px
+	.footer-img
+		margin-bottom 5px
+	.footer-items
+		// margin-bottom 20px
+		margin-bottom 0px
+	.footer-item
+		width 100%
+		margin auto
+		text-align center
+		&.dn
+			display none
+		.dn
+			display none
+		
+	.footer-list
+		margin-bottom 20px
+		margin-top 20px
+	
+	.footer-list-title
+		h4
+			margin-bottom 5px
+		
+	.footer-list-box a
+		margin-bottom 2px
+		
+	.footer-list span
+		margin auto
+		margin-bottom 6px
+		
+	.footer-list.libro
+		height 100px
+		
+	.footer-datos
+		margin-top 10px
+
+	.footer-direccion
+		padding-left 0px
+		padding-top 70px
+		padding-bottom 0px
+		&:before
+			top 0
+			right 0
+			margin auto
+			font-size 55px
+		p
+			margin 0
+			
+	.footer-datos .telefonos .footer-direccion:before,
+	.footer-datos .email .footer-direccion:before
+		top 15px
+		right 0
+		margin auto
+		font-size 50px
+		
+	// .footer-redes
+	// 	a	
+	// 		margin 0 18px
+			
+	.footer-redes
+		margin-top 10px
+		a	
+			margin 0 18px
+	.footer-copy
+		padding 10px
+		p
+			margin 0

@@ -1,0 +1,264 @@
+parameters:
+    admin_zero:
+        developer: Creativa
+        sidebar:
+            -
+                model: Banner
+                label: Banner
+                ico: image
+            # -
+            #     model: info
+            #     label: Información general
+            #     ico: info
+            -
+                type: tree
+                label: Principal
+                ico: home
+                interno:
+                    Info:
+                        label: Información general
+                        ico: info
+                    Somos:
+                        label: Somos
+                        ico: group
+                    Biblioteca:
+                        label: Biblioteca
+                        ico: book
+                    Evento:
+                        label: Evento
+                        ico: ticket
+                    Publicacion:
+                        label: Noticia / Blog
+                        ico: newspaper-o
+                    Area:
+                        label: Área de interés
+                        ico: newspaper-o
+                    Contacto:
+                        label: Contacto
+                        ico: envelope-o
+                    novedadesContacto:
+                        label: Blog & Noticias
+                        ico: envelope-o
+                    Suscribete:
+                        label: Suscripción
+                        ico: comments-o
+            -
+                type: tree
+                label: Estudios superiores
+                ico: graduation-cap
+                interno:
+                        InfoEs:
+                            label: Información general
+                            ico: info
+                        HomeES:
+                            label: Home
+                            ico: home
+                        Escuela:
+                            label: Escuela
+                            ico: building
+                        CategoriaCurso:
+                            label: Categoría curso
+                            ico: book
+                        Cursos:
+                            label: Curso
+                            ico: book
+                        Maestria:
+                            label: Maestría
+                            ico: book
+                        CategoriaDiplomatura:
+                            label: Categoría diplomatura
+                            ico: book
+                        Diplomatura:
+                            label: Diplomatura
+                            ico: book
+                        ProyectosEspeciales:
+                            label: Proyecto especial
+                            ico: briefcase
+                        CorporativoContacto:
+                            label: Contacto curso corp.
+                            ico: comments-o
+                        MaestriaContacto:
+                            label: Contacto maestría
+                            ico: comments-o
+                        MaestriaEnviarAmigo:
+                            label: Contacto maestría recom.
+                            ico: comments-o
+                        DiplomaturaEnviarAmigo:
+                            label: Contacto diplomatura recom.
+                            ico: comments-o
+                        DiplomadoContacto:
+                            label: Contacto diplomatura
+                            ico: comments-o
+                        CursosEnviarAmigo:
+                            label: Contacto curso recom.
+                            ico: comments-o
+                        ContactoES:
+                            label: Contacto
+                            ico: envelope-o
+            -
+                type: tree
+                label: Diag. y tratamiento
+                ico: user-md
+                interno:
+                    InfoDt:
+                        label: Información general
+                        ico: info
+                    HomeDt:
+                        label: Home
+                        ico: home
+                    SomosDt:
+                        label: Somos
+                        ico: users
+                    Diagnostico:
+                        label: Diagnóstico
+                        ico: stethoscope
+                    Senal:
+                        label: Señal de alerta
+                        ico: heartbeat
+                    # ArticuloAnt:
+                    #     label: Artículo
+                    #     ico: book
+                    Tratamiento:
+                        label: Tratamiento
+                        ico: medkit
+                    TallerDt:
+                        label: Taller
+                        ico: group
+                    Despistaje:
+                        label: Despistaje
+                        ico: medkit
+                    AreaDt:
+                        label: Área
+                        ico: book
+                    EspecialidadDt:
+                        label: Especialidad
+                        ico: plus-square
+                    EspecialistaDt:
+                        label: Especialista
+                        ico: user-md
+                    ContactoDespistaje:
+                        label: Contacto despistaje
+                        ico: comments-o
+                    TalleresContacto:
+                        label: Contacto taller
+                        ico: comments-o
+                    ContactoDt:
+                        label: Contacto
+                        ico: envelope-o
+            -
+                type: tree
+                label: Antares
+                ico: graduation-cap
+                interno:
+                    InfoAnt:
+                        label: Información general
+                        ico: info
+                    HomeAnt:
+                        label: Home
+                        ico: home
+                    SomosAnt:
+                        label: Acerca de
+                        ico: users
+                    Admision:
+                        label: Admisión
+                        ico: star
+                    TipoAdmision:
+                        label: Tipos de admisión
+                        ico: star
+                    Testimonio:
+                        label: Testimonio
+                        ico: paper-plane-o
+                    Academico:
+                        label: Académico
+                        ico: book
+                    Psicopedagogico:
+                        label: D. Psicopedagógico
+                        ico: user-md
+                    Recursos:
+                        label: Recurso
+                        ico: paperclip
+                    Articulo:
+                        label: Artículo
+                        ico: book
+                    EventoAnt:
+                        label: Evento
+                        ico: ticket
+                    NovedadAnt:
+                        label: Novedad
+                        ico: newspaper-o
+                    SuscripcionAnt:
+                        label: Suscripción
+                        ico: comments-o
+                    ContactoAnt:
+                        label: Contacto
+                        ico: envelope-o
+                    ArticuloContactoAnt:
+                        label: Articulo Contacto
+                        ico: envelope-o
+                    NovedadContactoAnt:
+                        label: Novedad Contacto
+                        ico: envelope-o
+                    somosAntContacto:
+                        label: Ex-Alumnos Info
+                        ico: envelope-o
+            -
+                type: tree
+                label: Fernando Wiese
+                ico: graduation-cap
+                interno:
+                    InfoFw:
+                        label: Información general
+                        ico: info
+                    BannerFw:
+                        label: Banner
+                        ico: video
+                    Donacion:
+                        label: Donaciones
+                        ico: home
+                    HomeFw:
+                        label: Home
+                        ico: home
+                    SomosFw:
+                        label: Somos
+                        ico: users
+                    AdmisionFw:
+                        label: Admisión
+                        ico: book
+                    LogrosFw:
+                        label: Logro
+                        ico: star-half-o
+                    ExitoFw:
+                        label: Historia de éxito
+                        ico: group
+                    NovedadFw:
+                        label: Novedad
+                        ico: newspaper-o
+                    Departamento:
+                        label: Departamentos
+                        ico: group
+                    TestimonioFw:
+                        label: Testimonio
+                        ico: book
+                    ProyectoEducativo:
+                        label: Proyecto educativo
+                        ico: briefcase
+                    ProyectoFw:
+                        label: Otros proyectos
+                        ico: briefcase
+                    ContactoFw:
+                        label: Contacto
+                        ico: envelope-o
+                    SuscribeteFw:
+                        label: Suscriptores
+                        ico: comments-o
+                    CompartirFw:
+                        label: Novedades Compartidas
+                        ico: comments-o
+            -
+                type: tree
+                label: Ajustes
+                ico: wrench
+                interno:
+                    ZeroSeo:
+                        label: SEO Metatags
+                        ico: cogs

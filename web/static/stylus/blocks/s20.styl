@@ -1,0 +1,180 @@
+.b20
+	// margin-top 50px
+	margin-top 0px
+	padding-top 30px
+	background #F7F8F8
+	padding-bottom 50px
+	.wancho
+		max-width 1000px
+	.owl-item
+		.b20-item
+			margin 0
+			width 100%
+	.owl-dots		
+		text-align center
+		padding 25px 0
+	.owl-dot
+		display inline-block
+		vertical-align top
+		width 18px
+		height 18px
+		border-radius 100%
+		background-color #d8dade
+		margin-left 10px
+		&.active
+			background-color #5d5d5d
+.b20-listas
+	margin-bottom 30px
+.b20-mes
+	width 250px
+	margin auto
+	top 120%
+	display none
+	// position absolute
+	position relative
+	z-index 100
+	background-color #fff
+	box-shadow 0px 10px 20px -4px rgba(0, 0, 0, 0.66)
+	a
+		display block
+		font-family t-7
+		border-bottom 1px solid #7631a3
+		border-left 1px solid #7631a3
+		border-right 1px solid #7631a3
+		font-size 15px
+		color  #7631a3
+		text-align left
+		padding-left 15px
+		height 30px
+		line-height 30px
+		transition all 150ms ease-out
+		&:hover, &.active
+			background-color #7631a3
+			color #fff
+	li
+		&:first-child
+			a
+				border-top 1px solid #7631a3
+.b20-lista-mes
+	width 250px
+	margin auto
+	text-align center
+	position relative
+	.b20-menu
+		border 1px solid #7631a3
+		border-radius 20px
+		line-height 33px
+		text-align center
+		position relative
+		font-family t-2
+		font-size 18px
+		color  #7631a3
+		display inline-block
+		padding 7px 50px 7px 20px
+
+		&:after
+			content ""
+			width 0
+			height 0
+			top 0
+			bottom 0
+			right 16px
+			margin auto
+			border-style solid
+			position absolute
+			display inline-block
+			border-width 10px 6px 0 6px
+			border-color #7631a3 transparent transparent transparent
+			transition all 200ms ease-out
+			transform-origin center
+		&.active
+			&:after
+				transform rotateZ(180deg)
+.b20-cnt-tab
+	position relative
+.b20-cnt
+	position absolute
+	left 0
+	top 0
+	visibility hidden
+	width 100%
+	&.active
+		visibility visible
+		position relative
+		
+.b20-contenedor
+	font-size 0
+	margin-top 30px
+.b20-item
+	width 31%
+	display inline-block
+	vertical-align top
+	// margin-left 2%
+	position relative
+	opacity 1
+	margin 0 1%
+	background white
+
+.b20-imagen
+	img
+		display block
+		max-width 100%
+		height auto
+.b20-noviembre
+	max-width 100%
+	text-align center
+	padding 20px 10px 
+	box-sizing border-box
+	p
+		font-family t-0
+		font-size 16px
+		margin-bottom 0
+		line-height 1.8
+.b20-meses
+	width 56px
+	height 56px
+	background #7631a3
+	line-height 1
+	position absolute
+	text-align center
+	top 0
+	left 6%
+	em
+		padding-top 10px
+	span
+		padding 0
+	em, span
+		font-family t-0
+		font-size 19px
+		color #fff
+		display block
+		line-height 100%
+
+@media screen and (max-width 600px)
+	// .b20-meses
+	// 	width 40px
+	// 	height 30px
+	// .b20-meses em,
+	// .b20-meses span
+	// 	font-size 14px
+	.b20-noviembre p
+		font-size 13px
+	.b20-noviembre
+		max-width inherit
+		width 100%
+		margin auto
+	.b11-parrafo, p
+		margin-top 5px
+
+@media screen and (max-width 480px)
+	.b20
+		margin-top 10px
+		padding-bottom 25px
+	.b20-item
+		width 100%
+		margin-left 0
+	.b20-lista-mes a
+		line-height 24px
+		font-size 16px
+	.b20-noviembre
+		text-align justify

@@ -1,0 +1,70 @@
+.b19
+	padding-bottom 30px
+	.wancho
+		max-width 1024px
+.b19-content
+	margin-top 35px
+	h3
+		font-family t-0
+		font-size 16px
+		margin-bottom 25px
+	p
+		font-family t-10
+		font-size 13px
+		line-height: 18px
+.b19-cuadro
+	background-color #f7f8f8
+	margin-top 25px
+	padding 25px 45px
+	box-sizing border-box
+	h3 
+		color c-1
+		text-align left
+		font-family t-0
+		font-size 14px
+	&.pink
+		h3 
+			color #b44fe9
+		.b19-lista 
+			a
+				&:hover,
+				&.active
+					color #b44fe9
+.b19-lista
+	font-size 0
+	li
+		text-align center
+		width 25%
+		font-style t-0
+		font-size 16px
+		display inline-block
+		vertical-align top
+		&:first-child,
+		&:nth-child(4n + 1)
+			text-align left
+		
+	a
+		display block
+		font-size 15px
+		color #5d5d5d
+		&:hover,
+		&.active
+			color c-1 
+	
+
+@media screen and (max-width 768px)
+	.b19-cuadro
+		padding 15px
+		margin-top 15px
+	.b19-lista 
+		a
+			font-size 12px
+@media screen and (max-width 480px)
+	.b19-lista 
+		li
+			width auto 
+			padding 0 7px
+			text-decoration underline
+			
+	.b19
+		text-align center

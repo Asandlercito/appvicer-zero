@@ -1,0 +1,36 @@
+.b7
+	position relative
+	padding-top 50px
+	padding-bottom 40px
+	.wancho
+		position relative
+		&:before
+			content ""
+			position absolute
+			background url(../img/b7.png) center center no-repeat
+			left -100px
+			top -130px
+			width 210px
+			height 225px
+.b7-parrafo
+	p, span
+		font-family t-10
+		font-size 13px
+		color #727277
+		padding-left 30px
+		line-height 2
+	strong
+		font-family t-0
+		font-size 13px
+		color #003772
+		margin-right 15px
+.b7-strong
+	text-align center
+
+
+@media screen and (max-width 768px)
+	.b7-parrafo
+		text-align center
+		span, p
+			display block
+			padding-left 0

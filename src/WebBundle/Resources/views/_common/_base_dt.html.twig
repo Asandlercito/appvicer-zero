@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" >
+
+    {% include 'WebBundle:_common:metatags.html.twig' %}
+
+    <!-- inicio favicon  iphone retina, ipad, iphone en orden-->
+    <link rel="icon" type="image/png" href="{{ asset('static_dt/img/favicon/256x256.png') }}"/>
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="{{ asset('static_dt/img/favicon/114x114.png') }}">
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="{{ asset('static_dt/img/favicon/72x72.png') }}">
+    <link rel="apple-touch-icon-precomposed" href="{{ asset('static_dt/img/favicon/57x57.png') }}">
+    <!-- end favicon -->
+
+    {% block cssadicional %}
+    {% endblock %}
+
+    {% set BUILD_ID = '1.01' %}
+
+    <link rel="stylesheet" href="{{ asset('static_dt/js/validationEngine.jquery.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ asset('static_dt/css/styles.css?v=1') }}{{ BUILD_ID }}"/>
+
+
+
+    {# <link rel="stylesheet" type="text/css" href="{{ asset('static_dt/css/blocks_styl.css?v=2') }}{{ BUILD_ID }}"/> #}
+    <!--[if lt IE 9]>
+        <script src="{{ asset('static/') }}js/html5.js"></script>
+        <script src="{{ asset('static/') }}js/respond.js" type="text/javascript"></script>
+        <link rel="stylesheet" type="text/css" href="{{ asset('static/') }}css/ie.css"/>
+    <![endif]-->
+</head>
+
+<body class="{% block classbody %}{% endblock %}">
+
+    <!-- html solo para el menu responsive -->
+    <div class="menu-mobile-close icon-close"></div>
+    <div class="menu-overlay"></div>
+    <!-- html solo para el menu responsive -->
+
+    <div class="cnt-wrapper">
+        <div class="wrapper">
+            <!-- HEADER START -->
+            {% include "WebBundle:_common:_header_dt.html.twig" %}
+            <!-- HEADER END -->
+
+            <!-- CONTENT START -->
+            {% block content %}{% endblock %}
+            <!-- CONTENT END -->
+        </div>
+    </div>
+
+    <!-- FOOTER START -->
+     {% include "WebBundle:_common:_footer_dt.html.twig" %}
+    <!-- FOOTER END -->
+
+    <!-- contenedor del menu responsive -->
+    <div class="menu-sidebar">
+        <div class="menu-sidebar-cnt"></div>
+    </div>
+
+    <script src="{{ asset('static_dt/js/jquery1.8.3.min.js') }}" type="text/javascript"></script>
+    <script type="text/javascript" src="{{asset('static_dt/js/jquery.validationEngine-es.js')}}"></script>
+    <script type="text/javascript" src="{{asset('static_dt/js/jquery.validationEngine.js')}}"></script>
+    <script src="{{ asset("static_dt/js/jquery.placeholder.js") }}" type="text/javascript"></script>
+    <script src="{{ asset('static_dt/js/main.js') }}" type="text/javascript"></script>
+
+    <!-- JSADD START -->
+    {% block jsfinal %}{% endblock %}
+    <!-- JSADD END -->
+
+    <script type="text/javascript">
+        $(document).ready(function() {
+            $("form").validationEngine('attach', {
+                promptPosition : "topLeft",
+                autoHidePrompt: true,
+                autoHideDelay: 4000,
+                binded: false,
+                scroll: false,
+                validateNonVisibleFields: true
+            });
+
+            // $('.menu-list a, .menu-responsive a').each(function() {
+            //     if ($(this).prop('href') == window.location.href) {
+            //        $(this).addClass('active');
+            //     }
+            // });
+
+            $(".btn-search-buscador").click(function(e){
+                e.preventDefault();
+                valid = $(".btn-search-buscador").closest("form").validationEngine('validate');
+
+                if (valid) {
+                    busqueda = $("#busqueda").val().trim();
+                    window.location.href = "/diagnostico-y-tratamiento/busqueda/"+busqueda+"/";
+                }
+            })
+        });
+    </script>
+</body>
+</html>

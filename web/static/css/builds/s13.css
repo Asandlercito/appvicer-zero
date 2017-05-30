@@ -1,0 +1,205 @@
+.cf {
+  zoom: 1;
+}
+.cf:after,
+.cf:before {
+  content: "";
+  display: table;
+}
+.cf:after {
+  clear: both;
+}
+.wrapper {
+  margin-top: 76px;
+}
+.b13-wrapp-video {
+  overflow: hidden;
+  position: relative;
+}
+.b13-wrapp-video.active .w-video {
+  position: relative;
+  opacity: 1;
+  -ms-filter: none;
+  filter: none;
+  visibility: visible;
+  z-index: 100;
+}
+.b13 {
+  position: relative;
+  margin-top: -50px;
+  margin-bottom: 30px;
+}
+.b13 .w-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  visibility: hidden;
+  opacity: 0;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+  filter: alpha(opacity=0);
+  -webkit-transition: opacity 0.3s linear;
+  -moz-transition: opacity 0.3s linear;
+  -o-transition: opacity 0.3s linear;
+  -ms-transition: opacity 0.3s linear;
+  transition: opacity 0.3s linear;
+}
+.b13 .w-videoinner {
+  position: relative;
+  padding-bottom: 56.25%; /* 16:9 */
+  padding-top: 25px;
+  height: 0;
+}
+.b13 .video-iframe {
+  background-color: #808080;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+.b13 .w-video {
+  z-index: 1;
+}
+.b13 .w-video .close-video {
+  width: 35px;
+  height: 35px;
+  -webkit-border-radius: 100%;
+  border-radius: 100%;
+  background-color: #fff;
+  line-height: 30px;
+  text-align: center;
+  display: block;
+  position: absolute;
+  top: 25px;
+  right: 15px;
+  z-index: 101;
+  font-size: 30px;
+  cursor: pointer;
+}
+.b13 .w-video .close-video:after {
+  content: "x";
+  font-family: 'arial', sans-serif;
+}
+.b13-texto {
+  display: inline-block;
+  position: absolute;
+  right: 0;
+  left: 0;
+  top: 0;
+  width: 100%;
+  text-align: center;
+  height: 22%;
+  bottom: 0;
+  margin: auto;
+}
+.b13-item {
+  background-position: center center;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  background-size: cover;
+  background-repeat: no-repeat;
+  min-height: 396px;
+  width: 100%;
+  position: relative;
+  margin: auto;
+  z-index: 2;
+}
+.b13-description {
+  display: inline-block;
+  vertical-align: middle;
+  position: relative;
+}
+.b13-description:before {
+  content: "";
+  position: absolute;
+  display: inline-block;
+  background-color: #fff;
+  height: 2px;
+  width: 30px;
+  bottom: -10px;
+  left: 0;
+}
+.b13-description h2 {
+  text-align: left;
+  color: #fff;
+  font-family: 'Conv_Poppins-SemiBold', sans-serif;
+  font-size: 21px;
+  margin: 0;
+  padding-bottom: 2px;
+}
+.b13-description h3 {
+  text-align: left;
+  color: #42b9f2;
+  margin: 0;
+  font-family: 'Conv_Poppins-SemiBold', sans-serif;
+  font-size: 21px;
+}
+.b13-iconplay {
+  font-size: 85px;
+  color: #fff;
+  display: inline-block;
+  vertical-align: middle;
+  height: 85px;
+  width: 85px;
+}
+.w-play {
+  cursor: pointer;
+  -webkit-transition: all 0.5s linear;
+  -moz-transition: all 0.5s linear;
+  -o-transition: all 0.5s linear;
+  -ms-transition: all 0.5s linear;
+  transition: all 0.5s linear;
+}
+.w-play.active {
+  display: none;
+}
+.w-play.anima {
+  -webkit-animation: opaciti 1s linear infinite alternate;
+  -moz-animation: opaciti 1s linear infinite alternate;
+  -o-animation: opaciti 1s linear infinite alternate;
+  -ms-animation: opaciti 1s linear infinite alternate;
+  animation: opaciti 1s linear infinite alternate;
+}
+.w-portada.active {
+  opacity: 0;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+  filter: alpha(opacity=0);
+  visibility: hidden;
+  display: none;
+}
+@media screen and (max-width: 765px) {
+  .b13-item {
+    width: 100%;
+    min-height: 250px;
+  }
+  .b13-description h2 {
+    font-size: 15px;
+  }
+  .b13-description h3 {
+    font-size: 15px;
+  }
+}
+@media screen and (max-width: 428px) {
+  .b13-description {
+    padding-top: 15px;
+  }
+  .b13-description h2 {
+    font-size: 15px;
+    text-align: center;
+  }
+  .b13-description h3 {
+    font-size: 15px;
+    text-align: center;
+  }
+  .b13-texto {
+    height: 50%;
+  }
+  .b13-iconplay {
+    margin-top: -10px;
+    display: block;
+    margin-bottom: 0px;
+  }
+}

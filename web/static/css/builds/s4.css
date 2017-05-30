@@ -1,0 +1,217 @@
+.cf {
+  zoom: 1;
+}
+.cf:after,
+.cf:before {
+  content: "";
+  display: table;
+}
+.cf:after {
+  clear: both;
+}
+.wrapper {
+  margin-top: 76px;
+}
+.b4 {
+  font-size: 0;
+  padding-top: 10px;
+}
+.b4 .g-tittle h3 {
+  color: #5b5b5f;
+}
+.b4 .g-tittle h3:before {
+  background: #5b5b5f;
+}
+.b4 .owl-item .b4-item {
+  width: auto;
+  display: block;
+  margin-left: 0;
+}
+.b4 .owl-dots {
+  text-align: center;
+  padding: 25px 0;
+}
+.b4 .owl-dot {
+  display: inline-block;
+  vertical-align: top;
+  width: 18px;
+  height: 18px;
+  -webkit-border-radius: 100%;
+  border-radius: 100%;
+  background-color: #d8dade;
+  margin-left: 10px;
+}
+.b4 .owl-dot.active {
+  background-color: #5d5d5d;
+}
+.b4-item {
+  width: 32.333333%;
+  height: 100%;
+  position: relative;
+  margin-top: 35px;
+  margin-left: 1.5%;
+  display: inline-block;
+  vertical-align: top;
+}
+.b4-item:after {
+  content: "";
+  background: url("../img/b4-sombra.png") center center no-repeat;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  margin: auto;
+  position: absolute;
+  opacity: 0.7;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=70)";
+  filter: alpha(opacity=70);
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  background-size: cover;
+}
+.b4-item img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  width: 100%;
+}
+.b4-item:before {
+  content: "";
+  top: 0;
+  right: 0;
+  width: 100%;
+  height: 0%;
+  position: absolute;
+  background: rgba(19,19,19,0.5);
+  z-index: 1;
+  -webkit-transition: all 0.25s;
+  -moz-transition: all 0.25s;
+  -o-transition: all 0.25s;
+  -ms-transition: all 0.25s;
+  transition: all 0.25s;
+}
+.b4-item:hover:before,
+.b4-item.active:before {
+  background: #2388e2;
+  height: 100%;
+}
+.b4-item:hover .b4-texto,
+.b4-item.active .b4-texto {
+  opacity: 0;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+  filter: alpha(opacity=0);
+}
+.b4-item:hover .caja-hover,
+.b4-item.active .caja-hover {
+  opacity: 1;
+  -ms-filter: none;
+  filter: none;
+}
+.b4-item:hover .caja-centro,
+.b4-item.active .caja-centro {
+  -webkit-transform: scale(1);
+  -moz-transform: scale(1);
+  -o-transform: scale(1);
+  -ms-transform: scale(1);
+  transform: scale(1);
+}
+.b4-texto {
+  color: #fff;
+  font-family: 'Conv_Poppins-SemiBold', sans-serif;
+  font-size: 20px;
+  position: absolute;
+  bottom: 32px;
+  left: 5%;
+  line-height: 28px;
+  z-index: 1;
+}
+.b4-texto p {
+  margin-bottom: 0;
+}
+.caja-hover {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+  filter: alpha(opacity=0);
+  font-size: 0;
+  text-align: center;
+  z-index: 2;
+}
+.caja-hover:before {
+  content: "";
+  width: 0;
+  height: 100%;
+  display: inline-block;
+  vertical-align: middle;
+}
+.caja-hover .caja-centro {
+  max-width: 389px;
+  display: inline-block;
+  vertical-align: middle;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  -webkit-transform: scale(0);
+  -moz-transform: scale(0);
+  -o-transform: scale(0);
+  -ms-transform: scale(0);
+  transform: scale(0);
+  -webkit-transition: all 0.25s;
+  -moz-transition: all 0.25s;
+  -o-transition: all 0.25s;
+  -ms-transition: all 0.25s;
+  transition: all 0.25s;
+}
+.caja-hover .caja-centro .g-tittle h3 {
+  font-family: 'Conv_Poppins-Medium', sans-serif;
+  font-weight: normal;
+  color: #fff;
+  font-size: 14px;
+  line-height: 1.2;
+}
+.caja-hover .caja-centro .g-tittle h3:before {
+  background-color: #fff;
+}
+.b4-bnt {
+  margin-top: 40px;
+}
+.b4-bnt .g-bnt {
+  width: 96px;
+  font-size: 12px;
+}
+.b4-bnt .g-bntdos {
+  margin: auto;
+  height: 33px;
+  line-height: 33px;
+  font-size: 14px;
+  border: 1px solid #fff;
+  color: #fff;
+  padding: 0 15px;
+}
+.b4-bnt .g-bntdos:hover {
+  color: #45a8f1;
+}
+.active {
+  margin-left: 0;
+}
+@media screen and (max-width: 1200px) {
+  .b4-texto {
+    font-size: 18px;
+  }
+}
+@media screen and (max-width: 1024px) {
+  .b4-texto {
+    font-size: 16px;
+    text-align: center;
+    left: 0;
+  }
+  .caja-hover .caja-centro .g-tittle h3 {
+    font-size: 14px;
+  }
+}

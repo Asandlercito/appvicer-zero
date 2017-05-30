@@ -1,0 +1,229 @@
+<footer class="footer">
+    <div class="wancho">
+        <figure class="footer-img">
+            <img src="{{ asset(info.logoFooter) }}" alt="">
+        </figure>
+
+        <div class="footer-items">
+            <div class="footer-item dn">
+                <div class="footer-list">
+                    <div class="footer-list-title">
+                        <h4>CPAL</h4>
+                    </div>
+                    <ul class="footer-list-box">
+                        <li>
+                            <a href="{{ path('somos') }}">- Quiénes Somos</a>
+                        </li>
+                        <li>
+                            <a href="{{ path('noticias') }}">- Novedades</a>
+                        </li>
+                        <li>
+                            <a href="{{ path('eventos') }}">- Eventos</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="footer-list">
+                    <div class="footer-list-title">
+                        <h4>Instituto de Diagnóstico <br>
+                            y Tratamiento
+                        </h4>
+                    </div>
+                    <ul class="footer-list-box">
+                        <li>
+                            <a href="{{ path('dt-diagnostico') }}">
+                                - Diagnóstico
+                            </a>
+                        </li>
+                        <li>
+                            <a href="{{ path('academico-ant', {slug: primerPrograma }) }}">
+                               - Tratamiento
+                            </a>
+                        </li>
+                        <li>
+                            <a href="{{ path('dt-talleres' , {slug: primerTaller}) }}">
+                               - Cursos y Talleres
+                            </a>
+                        </li>
+                        <li>
+                            <a href="{{ path('dt-despistajes', { slug : despistajes[0].slug }) }}">
+                               - Despistajes
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-item dn">
+                <div class="footer-list">
+                    <div class="footer-list-title">
+                        <h4>Escuela de Estudios Superiores</h4>
+                    </div>
+                    <ul class="footer-list-box">
+
+                        {% for item in maestriaHeader %}
+                            {% set nombre = item.nombre|split("//") %}
+                            <li>
+                                <a href="{{ path('es-maestria', { slug: item.slug }) }}">
+                                    -
+                                    {{ nombre.0 }}
+
+                                    {% if nombre.1 is defined %}
+                                        <br> {{ nombre.1 }}
+                                    {% endif %}
+                                </a>
+                            </li>
+                        {% endfor %}
+
+                        {% for item in diplomaturaHeader %}
+                            <li>
+                                <a href="{{ path('es-diplomatura', { slug1: item.slug, slug2: item.diplomaturas.0.slug }) }}">- {{ item.nombreFormateado }}</a>
+                            </li>
+                        {% endfor %}
+                        <li>
+                            <a href="{{ path('es-curso', {'slug' : primerCat.slug , 'curso' : primerCurso.slug}) }}">- Cursos</a>
+                        </li>
+                        <li>
+                            <a href="{{ path('es-proyectos', { slug : proyectoHeader.0.slug }) }}">- Proyectos Especiales</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="footer-list">
+                    <div class="footer-list-title">
+                        <h4>Colegio Antares</h4>
+                    </div>
+                    <ul class="footer-list-box">
+                        <li>
+                            <a href="{{ path('somos-ant') }}">
+                                - Acerca de
+                            </a>
+                        </li>
+                        <li>
+                            <a href="{{ path('admision-ant', {slug: primerTipo}) }}">
+                                - Admisión
+                            </a>
+                        </li>
+                        <li>
+                            <a href="{{ path('academico-ant', {slug: primerPrograma }) }}">
+                                - Académico
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-item">
+                <div class="footer-list libro dn">
+                    <div class="footer-list-title">
+                        <h4>Colegio Fernando Wiese Eslava</h4>
+                    </div>
+                    <ul class="footer-list-box">
+                        <li>
+                            <a href="">
+                                - Acerca de
+                            </a>
+                        </li>
+                        <li>
+                            <a href="">
+                                - Admisión
+                            </a>
+                        </li>
+                        <li>
+                            <a href="">
+                                - Académico
+                            </a>
+                        </li>
+                        <li>
+                            <a href="">
+                                - Donaciones
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="footer-list">
+                    <div class="footer-list-title">
+                        <h4>Recursos</h4>
+                    </div>
+                    <ul class="footer-list-box">
+                        <li>
+                            <a href="{{ info.aulaVirtual }}" target="_blank">
+                                - Aula Virtual
+                            </a>
+                        </li>
+                        <li>
+                            <a href="{{ info.intranet }}" target="_blank">
+                                - Intranet
+                            </a>
+                        </li>
+                        <li>
+                            <a href="{{ info.bibliotecaLink }}" target="_blank">
+                                - Biblioteca
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-item">
+                <div class="footer-datos">
+                    <div class="footer-datos-box direccion">
+                        <div class="footer-direccion">
+
+                            <p class="footer-direccion-title" >
+                                {# <strong>Cómo llegar</strong>#}
+                                <a href="{{ info.maps }}" target="_blank">Cómo llegar</a>
+                            </p>
+                            {% set direccion = info.direccion|split('//') %}
+
+                            {% if direccion.0 is defined %}
+
+                            <p> {{ direccion.0 }} {% endif %}<br>
+                                {% if direccion.1 is defined %}
+                                    {{ direccion.1 }}
+                                {% endif %}
+                            </p>
+                        </div>
+                    </div>
+                    <div class="footer-datos-box telefonos">
+                        <div class="footer-direccion">
+                            <p class="footer-direccion-title">
+                                <strong></strong>
+                            </p>
+                            <p>
+                                {% set cleanNumber = info.telefono|replace({ '(' : '', ')' : '', ' ' : '', '-' : '' }) %}
+                                <a href="tel:{{ cleanNumber }}" class="footer-telf">
+
+                                            TÉLEFONO: {{ info.telefono }}</a>  <br>
+                                       {% if info.fax %} Fax: {{ info.fax }} {% endif %}
+                            </p>
+                        </div>
+                    </div>
+                    <div class="footer-datos-box email">
+                        <div class="footer-direccion">
+                            <p class="footer-direccion-title">
+                                <strong></strong>
+                            </p>
+                            <p>
+                                <div class="footer-correo">
+                                    <a href="mailto:{{ info.correoContacto }}">{{ info.correoContacto }}</a>
+
+                                </div>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="footer-redes">
+                    <a href="{{ info.facebook }}" class="icon-fb" target="_blank" target="_blank"></a>
+                    <a href="{{ info.twitter }}" class="icon-twitter" target="_blank" target="_blank"></a>
+                    <a href="{{ info.youtube }}" class="icon-youtube2" target="_blank" target="_blank"></a>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- creditos -->
+    <section class="footer-copy">
+        <div class="wancho">
+            <div class="footer-copy-left">
+                <p> CPAL <span id="id_year"></span> - Todos los derechos reservados. </p>
+            </div>
+        </div>
+    </section>
+</footer>

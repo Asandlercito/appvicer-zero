@@ -1,0 +1,230 @@
+<footer class="footer">
+    <div class="wancho">
+        <figure class="footer-img">
+            <img src="{{ asset('static_ant/media/cpal-footer.png') }}" alt="">
+        </figure>
+
+        <div class="footer-items">
+            <div class="footer-item dn">
+                <div class="footer-list">
+                    <div class="footer-list-title">
+                        <h4><a>Acerca de</a></h4>
+                    </div>
+                    <ul class="footer-list-box">
+                        <li>
+                            <a href="{{ path('somos-ant') }}">Quiénes Somos</a>
+                        </li>
+                        <li>
+                            <a href="{{ path('somos-ant') }}#metodologia">Metodología</a>
+                        </li>
+                        <li>
+                            <a href="{{ path('somos-ant') }}#perfil-alumno">Perfil del Alumno</a>
+                        </li>
+                        <li>
+                            <a href="{{ path('somos-ant') }}#comunidad">Comunidad</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="footer-list">
+                    <div class="footer-list-title">
+                        <h4><a>Admisión</a></h4>
+                    </div>
+                    <ul class="footer-list-box">
+                        <li>
+                            <a href="{{ path('admision-ant', {slug: primerTipo}) }}">
+                                ¿Por qué Antares?
+                            </a>
+                        </li>
+
+                        {% for item in admision %}
+                            <li>
+                                <a href="{{ path('admision-ant', {slug: item.slug}) }}">
+                                   {{ item.nombrelimpio|capitalize }}
+                                </a>
+                            </li>
+                        {% endfor %}
+
+
+                        <li>
+                            <a href="{{ path('admision-ant', {slug: primerTipo}) }}#testimonios">
+                               Testimonios
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-item dn">
+                <div class="footer-list">
+                    <div class="footer-list-title">
+                        <h4><a>Académico</a></h4>
+                    </div>
+                    <ul class="footer-list-box">
+                        {% for item in academico %}
+                            <li>
+                                <a href="{{ path('academico-ant', {slug: item.slug}) }}">{{ item.nombrelimpio|capitalize }}</a>
+                            </li>
+                        {% endfor %}
+
+
+                        <li>
+                            <a href="">Calendario de actividades</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="footer-list">
+                    <div class="footer-list-title">
+                        <h4><a>Dpto. Psicopedagógico</a></h4>
+                    </div>
+                    <ul class="footer-list-box">
+                        {% for item in psico %}
+                             <li>
+                                <a href="{{ path('psicopedagogico-ant', {slug: item.slug}) }}">
+                                   {{ item.titulolimpio|capitalize }}
+                                </a>
+                            </li>
+                        {% endfor %}
+
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-item">
+                <div class="footer-list libro dn">
+                    <div class="footer-list-title">
+                        <h4><a>Recursos</a></h4>
+                    </div>
+                    <ul class="footer-list-box">
+                        <li>
+                            <a href="{{ infoant.intranet }}" target="_blank">
+                                Intranet
+                            </a>
+                        </li>
+                        <li>
+                            <a href="{{ path('publicaciones-ant', { slug : 'guias' }) }}">
+                                Publicaciones
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="footer-list">
+                    <div class="footer-informacion">
+                        <a href="{{ path('ant-contacto') }}">
+                            <p>Solicitar <br> Información </p>
+                            <i class="icon-solicitar"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-item">
+                <div class="footer-datos">
+                    <div class="footer-datos-box direccion">
+                        <div class="footer-direccion">
+                            <p class="footer-direccion-title">
+                                <strong>INICIAL Y PRIMARIA</strong>
+                            </p>
+
+                            {% set direccion = infoant.direccionPrimaria|split('//') %}
+
+                            {% if direccion.0 is defined %}
+
+                            <p> {{ direccion.0 }} {% endif %}<br>
+                                {% if direccion.1 is defined %}
+                                    {{ direccion.1 }}
+                                {% endif %}
+                            </p>
+                        </div>
+                    </div>
+                    <div class="footer-datos-box telefonos">
+                        <div class="footer-direccion">
+                            <p class="footer-direccion-title">
+                                <strong></strong>
+                            </p>
+                            <p>
+                                {% set telefonos = infoant.telefonoPrimaria|split(",") %}
+
+                                {% for item in telefonos %}
+                                        {% set cleanNumber = item|trim|replace({ '(' : '', ')' : '', ' ' : '', '-' : '' }) %}
+                                         <a href="tel:{{ cleanNumber }}">TÉLEFONO: {{ item }}</a>
+                                {% endfor %}
+                            </p>
+                        </div>
+                    </div>
+                    <div class="footer-datos-box email">
+                        <div class="footer-direccion">
+                            <p class="footer-direccion-title">
+                                <strong></strong>
+                            </p>
+                            {% set correos = infoant.correoPrimaria|split(",") %}
+                                    {% for item in correos %}
+                                            <a href="mailto:{{ correos.0|trim }}">{{ item|trim }}</a>
+                                    {% endfor %}
+
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-item">
+                <div class="footer-datos">
+                    <div class="footer-datos-box direccion">
+                        <div class="footer-direccion">
+                            <p class="footer-direccion-title">
+                                <strong>SECUNDARIA</strong>
+                            </p>
+                            {% set direccion = infoant.direccionSecundaria|split('//') %}
+
+                            {% if direccion.0 is defined %}
+
+                            <p> {{ direccion.0 }} {% endif %}<br>
+                                {% if direccion.1 is defined %}
+                                    {{ direccion.1 }}
+                                {% endif %}
+                            </p>
+                        </div>
+                    </div>
+                    <div class="footer-datos-box telefonos">
+                        <div class="footer-direccion">
+                            <p class="footer-direccion-title">
+                                <strong></strong>
+                            </p>
+                            <p>
+                                {% set telefonos = infoant.telefonoSecundaria|split(",") %}
+
+                                {% for item in telefonos %}
+                                        {% set cleanNumber = item|trim|replace({ '(' : '', ')' : '', ' ' : '', '-' : '' }) %}
+                                         <a href="tel:{{ cleanNumber }}">TÉLEFONO: {{ item }}</a>
+                                {% endfor %}
+                            </p>
+                        </div>
+                    </div>
+                    <div class="footer-datos-box email">
+                        <div class="footer-direccion">
+                            <p class="footer-direccion-title">
+                                <strong></strong>
+                            </p>
+                            {% set correos = infoant.correoSecundaria|split(",") %}
+
+                            {% for item in correos %}
+                                    <a href="mailto:{{ item|trim }}">{{ item|trim }}</a>
+                            {% endfor %}
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-redes">
+                <a href="{{ infoant.facebook }}" class="icon-fb" target="_blank"></a>
+                <a href="{{ infoant.twitter }}" class="icon-twitter" target="_blank"></a>
+                <a href="{{ infoant.youtube }}" class="icon-youtube2" target="_blank"></a>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- creditos -->
+    <section class="footer-copy">
+        <div class="wancho">
+            <div class="footer-copy-left">
+                <p>Colegio Antares - Todos los derechos reservados. </p>
+            </div>
+        </div>
+    </section>
+</footer>

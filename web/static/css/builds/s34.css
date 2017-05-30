@@ -1,0 +1,84 @@
+.cf {
+  zoom: 1;
+}
+.cf:after,
+.cf:before {
+  content: "";
+  display: table;
+}
+.cf:after {
+  clear: both;
+}
+.wrapper {
+  margin-top: 76px;
+}
+.b34 {
+  margin-top: 50px;
+}
+.b34 .g-tittle-center h3 {
+  font-size: 25px;
+}
+.b34 .g-btn-unico.g-naranja {
+  background-color: #eebd24;
+  border: 1px solid #eebd24;
+  color: #fff;
+  width: 200px;
+  height: 34px;
+  line-height: 34px;
+  display: inline-block;
+}
+.b34 .wancho {
+  display: table;
+  width: 460px;
+}
+.contenedor {
+  max-width: 461px;
+  text-align: center;
+  width: 100%;
+  display: block;
+  margin: auto;
+  display: table-cell;
+  vertical-align: middle;
+}
+.b34-gracias {
+  position: relative;
+  text-align: justify;
+}
+.b34-gracias h3 {
+  font-family: 'Conv_Poppins-SemiBold', sans-serif;
+  font-size: 70px;
+  color: #ef8f00;
+}
+.b34-imagen {
+  background-repeat: no-repeat;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  background-size: cover;
+  position: absolute;
+  width: 60px;
+  height: 60px;
+  top: 0;
+  left: 72%;
+}
+.b34-texto {
+  margin-top: 30px;
+}
+.b34-texto p,
+.b34-texto em {
+  font-family: 'Conv_Poppins-Medium', sans-serif;
+  font-size: 15px;
+  color: #000;
+  margin-bottom: 30px;
+}
+.b34-bnt .g-btn-unico.g-naranja {
+  margin: auto;
+}
+@media screen and (max-width: 480px) {
+  .b34-error h3 {
+    font-size: 60px;
+    text-align: center;
+  }
+  .b34-imagen {
+    display: none;
+  }
+}

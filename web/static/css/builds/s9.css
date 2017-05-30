@@ -1,0 +1,57 @@
+.cf {
+  zoom: 1;
+}
+.cf:after,
+.cf:before {
+  content: "";
+  display: table;
+}
+.cf:after {
+  clear: both;
+}
+.wrapper {
+  margin-top: 76px;
+}
+.b9 {
+  min-height: 385px;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  position: relative;
+  margin-bottom: 10px;
+}
+.b9 .wancho {
+  max-width: 850px;
+}
+.b9-ico {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  color: #004998;
+  font-size: 27px;
+}
+.b9-content {
+  display: table-cell;
+  vertical-align: middle;
+  height: 385px;
+  text-align: center;
+}
+.b9-titulo {
+  font-size: 30px;
+  margin-bottom: 30px;
+}
+.b9-titulo h3 {
+  font-size: inherit;
+}
+.b9-parrafo {
+  font-size: 13px;
+  font-family: 'arial', sans-serif;
+  line-height: 1.5;
+  text-align: left;
+  margin-bottom: 40px;
+}
+.b9-btn a {
+  margin: auto;
+}

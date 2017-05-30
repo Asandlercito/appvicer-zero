@@ -1,0 +1,92 @@
+.cf {
+  zoom: 1;
+}
+.cf:after,
+.cf:before {
+  content: "";
+  display: table;
+}
+.cf:after {
+  clear: both;
+}
+.wrapper {
+  margin-top: 76px;
+}
+.b26 {
+  position: relative;
+  z-index: 1;
+  height: 290px;
+}
+.b26 .wancho {
+  display: table;
+  max-width: 1000px;
+  position: relative;
+  z-index: 2;
+}
+.b26-item {
+  background-position: top center;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+.b26-sobra {
+  background-image: -webkit-linear-gradient(top, #fff 0%, #050505 50%);
+  background-image: -moz-linear-gradient(top, #fff 0%, #050505 50%);
+  background-image: -o-linear-gradient(top, #fff 0%, #050505 50%);
+  background-image: -ms-linear-gradient(top, #fff 0%, #050505 50%);
+  background-image: linear-gradient(to bottom, #fff 0%, #050505 50%);
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  opacity: 0.3;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=30)";
+  filter: alpha(opacity=30);
+}
+.b26-title {
+  text-align: left;
+  padding-left: 0px;
+  color: #fff;
+  display: table-cell;
+  vertical-align: middle;
+  height: 290px;
+}
+.b26-title h3 {
+  font-size: 28px;
+  text-align: left;
+  line-height: 1;
+  position: relative;
+}
+.b26-title h3:before {
+  content: "";
+  position: absolute;
+  bottom: -15px;
+  display: inline-block;
+  width: 36px;
+  height: 7px;
+  background-color: #fff;
+  right: 0;
+  left: inherit;
+}
+@media screen and (max-width: 768px) {
+  .b26 {
+    height: 250px;
+  }
+  .b26-title {
+    padding-left: 10px;
+    height: 250px;
+  }
+  .b26-title h3 {
+    font-size: 33px;
+  }
+  .b26-title h3:before {
+    width: 26px;
+    right: 0;
+    height: 4px;
+  }
+}

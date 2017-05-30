@@ -1,0 +1,152 @@
+.cf {
+  zoom: 1;
+}
+.cf:after,
+.cf:before {
+  content: "";
+  display: table;
+}
+.cf:after {
+  clear: both;
+}
+.wrapper {
+  margin-top: 76px;
+}
+.b22 {
+  margin-top: 48px;
+}
+.b22 .wancho {
+  max-width: 1024px;
+}
+.b22-content img {
+  max-width: 100%;
+  display: block;
+  height: auto;
+}
+.b22-tittle h3 {
+  text-align: left;
+  font-family: 'Conv_Poppins-Medium', sans-serif;
+  color: #423f3f;
+  font-size: 22px;
+  margin-bottom: 0px;
+  line-height: 1.2;
+}
+.b22-bloque {
+  display: block;
+  font-size: 0;
+  margin: 35px 0px;
+}
+.b22-b1 {
+  width: 45%;
+  display: inline-block;
+  vertical-align: middle;
+}
+.b22-b1 p {
+  font-size: 17px;
+  margin: 0px;
+  color: #7631a3;
+}
+.b22-b2 {
+  width: 54%;
+  display: inline-block;
+  background-color: #7631a3;
+  vertical-align: middle;
+}
+.b22-b2 ul {
+  display: block;
+  text-align: center;
+  font-size: 0;
+}
+.b22-b2 li {
+  display: inline-block;
+  margin: 0px 10px;
+  color: #fff;
+}
+.b22-b2 li i {
+  font-size: 30px;
+}
+.b22-b-p {
+  display: inline-block;
+  text-align: left;
+  margin-left: 10px;
+  padding: 20px 0px;
+}
+.b22-subtittle {
+  font-size: 17px;
+}
+.b22-b-p h3 {
+  margin: 0px;
+}
+.b22-b-p p {
+  font-family: 'Conv_Sintony-Regular', sans-serif;
+  font-size: 12px;
+  margin: 0px;
+}
+.b22-parrafo {
+  margin-top: 10px;
+}
+.b22-parrafo p {
+  font-family: 'arial', sans-serif;
+  font-size: 13px;
+  line-height: 20px;
+}
+@media screen and (max-width: 1075px) {
+  .b22-b2 ul {
+    text-align: left;
+  }
+  .b22-b2 li {
+    padding-left: 20px;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    margin: 0px;
+    text-align: left;
+    width: 50%;
+  }
+  .b22-b2 li:last-child {
+    width: 100%;
+  }
+}
+@media screen and (max-width: 768px) {
+  .b22-b1 {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+  .b22-b2 {
+    width: 100%;
+  }
+  .b22-bloque {
+    margin: 20px 0px;
+  }
+  .b22-tittle h3 {
+    font-size: 18px;
+  }
+  .b22 {
+    margin: 20px 0px;
+  }
+}
+@media screen and (max-width: 391px) {
+  .b22-b2 li {
+    width: 100%;
+  }
+}
+@media screen and (max-width: 480px) {
+  .b22-tittle h3 {
+    text-align: center;
+  }
+  .b22-parrafo {
+    text-align: justify;
+    margin: 0;
+  }
+  .b22-b2 li {
+    width: 235px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: left;
+  }
+  .b22-b2 li:last-child {
+    width: 50%;
+    width: 235px;
+  }
+}

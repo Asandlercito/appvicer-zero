@@ -1,0 +1,116 @@
+<header class="header">
+
+    <div class="header-input">
+        <div class="wancho h-wancho">
+            <form>
+                <input class="validate[required]" type="text" id="busqueda" name="valor" placeholder="¿Que deseas buscar?">
+                <button class="btn-buscador">Buscar</button>
+            </form>
+        </div>
+    </div>
+
+    {% set route = app.request.attributes.get('_route') %}
+
+    <div class="wrapper-header">
+        <div class="wancho header-ctn">
+            <a href="{{ path('home-fw') }}" class="header-logo">
+                <img src="{{asset('static_fw/img/logo.png')}}" alt="" width="149" height="66">
+            </a>
+            <nav class="menu">
+                <div class="menu-wrap">
+                    <ul class="menu-list"> <!-- "menu-list" es usado para el menu responsive -->
+                        <li class="menu-item {% if route == 'somos-fw' %} active {% endif %}"><a href="{{ path('somos-fw') }}" class="menu-link">QUIÉNES SOMOS</a></li>
+                        <li class="menu-item {% if route == 'proyedu-fw' %} active {% endif %}"><a href="{{ path('proyedu-fw') }}" class="menu-link ">PROYECTO EDUCATIVO</a></li>
+                        <li class="menu-item {% if route == 'logros-fw' %} active {% endif %}"><a href="{{ path('logros-fw') }}" class="menu-link">NUESTROS LOGROS</a></li>
+                        <li class="menu-item {% if route == 'historias-fw' %} active {% endif %}"><a href="{{ path('historias-fw') }}" class="menu-link">HISTORIAS DE ÉXITO</a></li>
+                    </ul>
+
+                    <div class="h-header">
+                        <div class="haz-donac">
+                            <div class="h-donacion">
+                                <a href="{{ path('donacion-fw') }}">
+                                    <i class="icon-donacion"></i>
+                                    <p><strong>Haz tu</strong>donación</p>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="h-searh">
+                           <i class="icon-icono-buscar"></i>
+                         </div>
+                        <div class="h-hambur">
+                            <span>
+                                <i class="linia1"></i>
+                                <i class="linia2"></i>
+                                <i class="linia3"></i>
+                            </span>
+                        </div>
+                        <div class="cerrar">
+                            <i class="line-1"></i>
+                            <i class="line-2"></i>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </div>
+
+<section class="b35">
+    <div class="b35-wrapper" style="background-image: url()">
+
+        <a href="{{ path('admision-fw') }}" class="b35-item">
+            <div class="b35-center">
+                <i class="icon-admision b35-icon"></i>
+                <span>ADMISIÓN</span>
+            </div>
+        </a>
+
+        <a href="{{ path('novedades-fw') }}"  class="b35-item">
+            <div class="b35-center">
+                <i class="icon-novedades b35-icon"></i>
+                <span>NOVEDADES</span>
+            </div>
+        </a>
+
+        {#<a href="{{ path('donacion-fw') }}" class="b35-item">#}
+        <a href="{{ path('donacion-fw') }}" class="b35-item">
+            <div class="b35-center">
+                <i class="icon-empresas b35-icon"></i>
+                <span>EMPRESAS QUE NOS APOYAN</span>
+            </div>
+        </a>
+
+        <a href="{{ path('contacto-fw') }}" class="b35-item">
+            <div class="b35-center">
+                <i class="icon-contactanos b35-icon"></i>
+                <span>CONTÁCTANOS</span>
+            </div>
+        </a>
+
+        {#<a href="{{ info.direccion.5.intranet }}" target="_blank" class="b35-item">#}
+        <a href="{{ infofw.intranet }}" target="_blank" class="b35-item">
+            <div class="b35-center">
+                <i class="icon-intranet b35-icon"></i>
+                <span>INTRANET</span>
+            </div>
+        </a>
+
+    </div>
+
+    <div class="b35-redes">
+        <a href="{{ infofw.facebook }}" target="_blank" class="b35-face">
+            <i class="icon-facebook b35-icon-redes"></i>
+            <span>ME GUSTA</span>
+        </a>
+
+        <a href="{{ infofw.twitter }}" target="_blank" class="b35-face">
+            <i class="icon-twitter-logo b35-icon-redes  b35-twitter"></i>
+            <span>SÍGUENOS</span>
+        </a>
+
+        <a href="{{ infofw.youtube }}" target="_blank" class="b35-face">
+            <i class="icon-youtube-logo  b35-icon-redes"></i>
+            <span>SUSCRÍBETE</span>
+        </a>
+    </div>
+</section>
+</header>

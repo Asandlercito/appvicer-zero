@@ -1,0 +1,89 @@
+// Colors idendity
+c-0 = #423f3f
+c-1 = #004998 //azul
+c-2 = #ef8e00
+c-3 = #d51c70
+c-4 = #45a8f1
+c-5 = #47c6e4
+c-6 = #5a5a5e
+c-7 = #79d0fb
+c-8 = #39b6e7 //celeste cpal web
+c-9 = #88868b
+c-10 = #5c5c5c
+c-11 = #43ccf1
+c-12 = #eebd24
+c-13 = #42b9f2
+c-14 = #d7d9dd
+c-15 = #c2c4c9
+c-16 = #1d110c
+c-17 = #d21910
+c-18 = #b44fe9
+c-19 = #717176
+c-20 = #ffa31e
+c-21 = #dd498c
+c-22 = #eccd4e
+c-23 = #312d1d
+c-24 = #fff
+// Fonts
+t-0 = 'Conv_Poppins-Medium', sans-serif
+t-1 = 'Conv_Poppins-Bold', sans-serif
+t-2 = 'Conv_Poppins-SemiBold', sans-serif
+t-3 = 'Conv_Roboto-Bold', sans-serif
+t-4 = 'Conv_Roboto-BoldCondensed', sans-serif
+t-5 = 'Conv_Roboto-Condensed', sans-serif
+t-6 = 'Conv_Roboto-Light', sans-serif
+t-7 = 'Conv_Roboto-Regular', sans-serif
+t-8 = 'Conv_Sintony-Bold', sans-serif
+t-9 = 'Conv_Sintony-Regular', sans-serif
+t-10 = 'arial', sans-serif
+t-11 = 'Conv_Poppins-Light'
+icomoon = 'icomoon'
+
+
+// Mixins
+placeholder(color,famyli)
+	::-webkit-input-placeholder { color: color; font-family: famyli; } /* WebKit */
+	:-moz-placeholder { color: color; font-family: famyli; } /* Firefox 18- */
+	::-moz-placeholder { color: color; font-family: famyli; } /* Firefox 19+ */
+	:-ms-input-placeholder { color: color; font-family: famyli; } /* IE 10+ */
+
+transition-all()
+	transition all 0.25s
+
+cf()
+	zoom 1
+	&:after
+	&:before
+		content ""
+		display table
+	&:after
+		clear both
+.cf
+	cf()
+
+backgroundsize()
+	background-repeat no-repeat
+	background-size cover
+	background-position center center
+
+img-res()
+	width 100%
+	height auto
+	display block
+
+background-t(color, alpha = 1)
+	ms-color = argb(color, alpha)
+	background rgba(color, alpha)
+	zoom 1
+	filter s('progid:DXImageTransform.Microsoft.gradient(startColorstr=%s,endColorstr=%s)', ms-color, ms-color) !important
+hex(decimal)
+	hex-value = ('0') ('1') ('2') ('3') ('4') ('5') ('6') ('7') ('8') ('9') ('A') ('B') ('C') ('D') ('E') ('F')
+	unquote(hex-value[floor(decimal / 16)] + hex-value[floor(decimal % 16)])
+
+argb(color, alpha = 1)
+	unquote('#') + hex(alpha * 255) + hex(red(color)) + hex(green(color)) + hex(blue(color))
+
+.wrapper
+	margin-top 76px
+
+

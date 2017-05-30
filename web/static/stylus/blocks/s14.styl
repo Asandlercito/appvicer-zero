@@ -1,0 +1,245 @@
+.b14
+	margin-top 40px
+.b14-content
+	width 100%
+	font-size 0
+	margin-bottom 30px
+	
+.b14-left
+	display inline-block
+	vertical-align middle
+	padding-left 20px
+	.no-before
+		margin 20px 0
+		h3
+			font-size 22px
+			&:before
+				content none
+.b14-right, .b14-table
+	width 100%
+	display inline-block
+	vertical-align middle
+	margin-bottom 30px
+	
+.b14-table
+	width 43%
+	margin-left 70px
+
+.b14-noticias
+	font-size 13px
+	strong
+		color c-13
+
+.b14-list
+	li
+		list-style disc
+		color c-13
+		p
+			color c-0
+			margin-bottom 12px
+.b14-azul
+	background-color c-1
+	display table
+	width 440px
+
+.b14-insc
+.b14-dinero
+	text-align left
+	display table-cell
+	height 50px
+	vertical-align middle
+.b14-dinero
+	display table-cell
+	text-align center
+	span
+		min-width 90px
+	em
+		font-size 14px
+		color white
+
+
+
+.b14-insc
+	display table-cell
+	width 204px
+	box-sizing border-box
+	padding-left 31px
+	position relative
+	h2
+		font-size 22px
+		font-family  t-2
+		margin 0
+		color white
+	&:before
+		content ""
+		right 0
+		position absolute
+		top 0
+		left 100%
+		margin auto
+		width 2px
+		height 54px
+		background-color white
+.b14-dinero
+	font-family t-0
+	span, p
+		font-size 14px
+		color white
+.b14-celeste
+		background-color c-13
+		display table
+		width 440px
+
+
+.b14-title
+	background-color rgba(79, 184, 233, 0.1)
+	position relative
+	height 52px
+	cursor pointer
+	h3
+		font-family t-7
+		font-size 15px
+		padding-top 21px
+		padding-left 36px
+		color #5c5c5f
+		border-bottom 1px solid #e1e1e1
+		padding-bottom 15px
+		&:before
+			content "+"
+			font-size 40px
+			position absolute
+			color #5c5c5f
+			right 2%
+			top 7px
+			transition-all()
+		&:after
+			content "-"
+			font-size 60px
+			position absolute
+			color white
+			right 2%
+			top -6px
+			transition-all()
+			opacity 0
+	&:hover
+		background-color #134b96
+		h3
+			color white
+			&:after
+				opacity 0
+			&:before
+				opacity 1
+				color white
+		.menos
+			opacity 1
+	&.active
+		background-color #134b96
+		h3
+			color white
+			&:after
+				opacity 1
+			&:before
+				content "-"
+				opacity 0
+				color white
+				
+			
+.b14-texto
+	margin 36px 0
+	p
+		margin-top 10px
+		text-align justify
+		font-family t-7
+		font-size 13px
+		color #5c5c5f
+		line-height: 2
+		margin 0
+		
+
+.b14-item
+	&:first-child
+		padding-top 0
+
+.b14-texto	
+	padding 0 50px
+	display none
+
+.b14-pregunta
+	font-size 15px
+	line-height 19px
+	color #828282
+	position relative
+	padding 0 50px
+	cursor pointer
+	&:after
+		content "\e608"
+		position absolute
+		top 5px
+		right 5px
+		font-family: icomoon
+		font-size 30px
+		transition all .3s linear
+	&.active, &:hover
+		color #1174ce	
+		&:after
+			transform rotate(180deg)
+			
+@media screen and (max-width 1070px)
+	.b14-content
+		text-align center
+	.b14-table,
+	.b14-left
+		text-align left
+	.b14-table
+		margin-top 10px
+
+@media screen and (max-width 900px)
+	.b14-texto p
+		line-height 1.5
+	.b14-table
+		margin auto
+		text-align center
+		display block
+		width 100%
+	.b14-right
+		width 100%
+		display inline-block
+		width auto
+		margin 30px 0
+	.b14-left
+		width 100%
+
+@media screen and (max-width 530px)
+	.b14-azul
+		width 100%
+	.b14-insc
+		display block
+		width 100%
+		padding 0 30px
+		text-align center
+		&:before
+			height 2px
+			width 100%
+			left 0
+			right 0
+			top inherit
+			bottom 0
+			margin auto
+		h2
+			padding-top 15px
+	.b14-celeste
+		display block
+		width auto
+	.b14-dinero
+		display block
+		height auto
+		padding 13px 0
+		
+	.b14-left
+		width 91%
+		
+	.b14-right
+		width 100%
+	
+	.b14-texto
+		padding 0 20px

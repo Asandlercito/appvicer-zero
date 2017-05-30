@@ -1,0 +1,211 @@
+<footer class="footer">
+    <!-- creditos -->
+    <section class="footer-copy">
+        <div class="f-ctnt-wrap">
+            <div class="footer-wrapper">
+                <div class="footer-wrap-content">
+                    <div class="footer-title">
+                        <h2>MAPA DE SITIO</h2>
+                    </div>
+                    <div class="cnt-general-wrap">
+                        <div class="f-items">
+                            <h3>Acerca de</h3>
+                            <ul>
+                                <li>
+                                    <a href="{{ path('somos-fw') }}">
+
+                                        Quiénes somos
+                                    </a>
+
+                                </li>
+                                <li>
+                                    <a href="/colegio-fernando-wiese/somos/#mision-vision">
+                                     Misión, visión y valores
+
+                                    </a>
+
+                                </li>
+                                <li>
+                                    <a href="/colegio-fernando-wiese/somos/#nuestro-equipo">
+                                        Nuestro equipo
+
+                                    </a>
+
+                                </li>
+
+                            </ul>
+                        </div>
+                        <div class="f-items">
+                            <h3> Proyecto Educativo</h3>
+                            <ul>
+
+                                <li>
+                                    <a href="/colegio-fernando-wiese/proyecto-educativo/#proyecto-educativo">
+                                         Metodología Auditiva Oral
+
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="/colegio-fernando-wiese/proyecto-educativo/#proyecto-educativo">
+                                        Pedagogía
+
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="/colegio-fernando-wiese/proyecto-educativo/#proyecto-educativo">
+
+                                         Psicología
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="/colegio-fernando-wiese/proyecto-educativo/#proyecto-educativo">
+                                        Audiología
+
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="/colegio-fernando-wiese/proyecto-educativo/#proyecto-educativo">
+                                        Asistencia Social
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="/colegio-fernando-wiese/proyecto-educativo/#proyecto-educativo">
+                                        Familia
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="f-items f-admision">
+                            <a href="{{ path('admision-fw') }}" class="f-title-ancla">
+                                <h3>Admisión</h3>
+
+                            </a>
+                            <a href="{{ path('logros-fw') }}" class="f-title-ancla">
+                                <h3>Nuestros Logros</h3>
+
+                            </a>
+                            <a href="{{ path('historias-fw') }}" class="f-title-ancla">
+                                <h3>Historias de éxito</h3>
+
+                            </a>
+
+                        </div>
+                        <div class="f-items ">
+                            <a href="/colegio-fernando-wiese/#empresas-apoyan" class="f-title-ancla">
+                               <h3>Empresas que nos apoyan</h3>
+                            </a>
+                             <a href="{{ path('contacto-fw') }}" class="f-title-ancla f-contactanos">
+                                <h3>Contáctanos</h3>
+                            </a>
+
+                             <div class="f-items-imagen">
+                                <a href="{{ path('donacion-fw') }}">
+                                    <img src="{{asset('static_fw/img/footer-img.png')}}" width="107" height="33" alt="">
+                                </a>
+
+                             </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="footer-wrap-ubicacion">
+                    <h3>UBÍCANOS</h3>
+                    <ul>
+                        <li>
+                            <div class="f-icono-contacto f-ico-contac">
+                                <i class="icon-ubicacion footer-icono"></i>
+
+                            </div>
+                            <div class="f-direccion f-llegar">
+                               <a href="">
+                                {# {{ dump(info.direccion.5) }} #}
+                                    <h2>CÓMO LLEGAR</h2>
+                                    {% set dir = infofw.direccion|split('//') %}
+                                    <h2>{% if dir.0 is defined %} {{ dir.0 }} {% endif %}</h2>
+                                    <h2>{% if dir.1 is defined %} {{ dir.1 }} {% endif %}</h2>
+
+                               </a>
+
+                            </div>
+
+                        </li>
+                        <li>
+                            <div class="f-icono-contacto">
+                                <i class="icon-telefono footer-icono"></i>
+
+                            </div>
+                            <div class="f-direccion">
+                               <a href="tel: {{ infofw.telefono }}">
+                                   <h2>{{ infofw.telefono }}</h2>
+                                </a>
+
+                            </div>
+
+                        </li>
+                        <li>
+                            <div class="f-icono-contacto">
+                                <i class="icon-mensaje footer-icono"></i>
+
+                            </div>
+                            <div class="f-direccion">
+                                {% set correo = infofw.correoContacto|split(',') %}
+                                <a href="mailto:{% if correo.0 is defined %} {{ correo.0 }} {% endif %}">
+                                    {% set correo = infofw.correoContacto|split(',') %}
+                                        {% for item in correo %}
+
+                                            {% if item is defined %}
+                                                <h2> {{ item }} </h2>
+                                            {% endif %}
+
+                                        {% endfor %}
+
+
+                                </a>
+
+
+                            </div>
+
+                        </li>
+                    </ul>
+                </div>
+                <div class="footer-wrap-redes">
+                    <ul>
+                        <li>
+                            <a href="{{ infofw.facebook }}" target="_blank">
+                                <div class="icono-redes-sociales">
+
+                                </div>
+
+                            </a>
+                        </li>
+                        <li>
+                            <a href="{{ infofw.twitter }}" target="_blank">
+                                <div class="icono-redes-sociales twitter">
+
+                                </div>
+
+                            </a>
+
+                        </li>
+                        <li>
+                            <a href="{{ infofw.youtube }}" target="_blank">
+                                <div class="icono-redes-sociales youtube">
+
+                                </div>
+
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+        </div>
+        <div class="wancho">
+            <div class="footer-copy-left">
+                <p>Copyright <span id="id_year"></span> - Empresa. Todos los derechos reservados. </p>
+            </div>
+            <div class="footer-copy-right">
+                <a class="link-staff" target="_blank" href="http://www.staffcreativa.pe/">Diseño y desarrollo <strong class="staffteam">staffcreativa</strong></a>
+            </div>
+        </div>
+    </section>
+</footer>

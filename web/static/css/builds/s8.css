@@ -1,0 +1,114 @@
+.cf {
+  zoom: 1;
+}
+.cf:after,
+.cf:before {
+  content: "";
+  display: table;
+}
+.cf:after {
+  clear: both;
+}
+.wrapper {
+  margin-top: 76px;
+}
+.b8 {
+  font-size: 0;
+  text-align: center;
+}
+.b8-item {
+  height: 280px;
+  width: 33.33333%;
+  display: inline-block;
+  vertical-align: top;
+  position: relative;
+}
+.b8-item img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+.b8-item:hover .b8-capa {
+  opacity: 0.8;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=80)";
+  filter: alpha(opacity=80);
+}
+.b8-item:hover .b8-texcenter {
+  -webkit-transform: translateY(0);
+  -moz-transform: translateY(0);
+  -o-transform: translateY(0);
+  -ms-transform: translateY(0);
+  transform: translateY(0);
+}
+.b8-table {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  text-align: center;
+}
+.b8-table:before {
+  content: "";
+  width: 0;
+  height: 100%;
+  display: inline-block;
+  vertical-align: middle;
+}
+.b8-texcenter {
+  vertical-align: middle;
+  display: inline-block;
+  position: relative;
+  z-index: 1;
+  -webkit-transform: translateY(10px);
+  -moz-transform: translateY(10px);
+  -o-transform: translateY(10px);
+  -ms-transform: translateY(10px);
+  transform: translateY(10px);
+  -webkit-transition: all 0.5s ease;
+  -moz-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+  -ms-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+.b8-texcenter p {
+  font-family: 'Conv_Poppins-Medium', sans-serif;
+  font-size: 22px;
+  color: #fff;
+}
+.b8-texcenter i {
+  font-size: 58px;
+  color: #fff;
+}
+.b8-capa {
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  -webkit-transition: all 0.5s ease;
+  -moz-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+  -ms-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+@media screen and (max-width: 640px) {
+  .b8-item {
+    width: 49%;
+  }
+  .b8-texcenter p {
+    font-size: 18px;
+  }
+  .b8-texcenter i {
+    font-size: 48px;
+  }
+}
+@media screen and (max-width: 480px) {
+  .b8-item {
+    width: 100%;
+    height: 220px;
+  }
+}

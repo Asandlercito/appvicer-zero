@@ -1,0 +1,53 @@
+{% extends "WebBundle:_common:_base.html.twig" %}
+
+{% block cssadicional %}
+{% endblock %}
+
+{% block classbody %}{% endblock %}
+
+{% block content %}
+
+
+<!-- BLOQUE 27 -->
+<section class="b27">
+    <div class="wancho height">
+        <div class="contenedor height">
+            <div class="b27-error">
+                <h3>ERROR</h3>
+                <div class="b27-imagen" style="background-image: url('{{ asset('static/media/57px.png') }}')">
+                </div>
+            </div>
+            <div class="b27-texto">
+                <span>Lo sentimos, la página no esta disponible</span>
+                <p>Parece que ha habido un error con la página que estabas buscando Es posible que la entrada haya sido elimanado o que la dirección ni exista</p>
+            </div>
+            <div class="b27-bnt">
+                <a href="{{ path('home') }}" class="g-btn-unico g-naranja">
+                <span>Página principal</span>
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+
+{% endblock %}
+
+{% block jsfinal %}
+<script type="text/javascript">
+    $(function(){
+
+        function fullScreen(){
+
+            var vHeight = $(window).height();
+            var header = $('.header').height();
+            var footer = $('.footer').height();
+
+            $('.height').height(vHeight - header - footer);
+
+        }
+
+        fullScreen()
+
+    });
+</script>
+{% endblock %}

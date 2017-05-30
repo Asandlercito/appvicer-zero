@@ -1,0 +1,266 @@
+.b27
+	margin-top 40px
+.b27-content
+	width 100%
+	font-size 0
+	margin-bottom 30px
+	
+.b27-left
+	display inline-block
+	vertical-align middle
+	padding-left 20px
+	.no-before
+		margin 20px 0
+		h3
+			font-size 22px
+			&:before
+				content none
+.b27-right, .b27-table
+	width 100%
+	display inline-block
+	vertical-align middle
+	margin-bottom 30px
+	
+.b27-table
+	width 43%
+	margin-left 70px
+
+.b27-noticias
+	font-size 13px
+	strong
+		color c-13
+
+.b27-list
+	li
+		list-style disc
+		color c-13
+		p
+			color c-0
+			margin-bottom 12px
+.b27-azul
+	background-color c-1
+	display table
+	width 440px
+
+.b27-insc
+.b27-dinero
+	text-align left
+	display table-cell
+	height 50px
+	vertical-align middle
+.b27-dinero
+	display table-cell
+	text-align center
+	span
+		min-width 90px
+	em
+		font-size 14px
+		color white
+
+
+
+.b27-insc
+	display table-cell
+	width 204px
+	box-sizing border-box
+	padding-left 31px
+	position relative
+	h2
+		font-size 22px
+		font-family  t-2
+		margin 0
+		color white
+	&:before
+		content ""
+		right 0
+		position absolute
+		top 0
+		left 100%
+		margin auto
+		width 2px
+		height 54px
+		background-color white
+.b27-dinero
+	font-family t-0
+	span, p
+		font-size 14px
+		color white
+.b27-celeste
+		background-color c-13
+		display table
+		width 440px
+
+
+.b27-title
+	background-color white
+	position relative
+	height 52px
+	cursor pointer
+	h3
+		font-family t-3
+		font-size 15px
+		padding-top 21px
+		padding-left 36px
+		color #5c5c5f
+		border 1px solid #e1e1e1
+		padding-bottom 15px
+		text-transform uppercase
+		box-sizing border-box
+		&:before
+			content "\e608"
+			font-family icomoon
+			font-size 40px
+			position absolute
+			color #5c5c5f
+			right 2%
+			top 7px
+			color c-0
+			transition-all()
+	&:hover, &.active
+		background-color c-2
+		h3
+			color white
+			&:before
+				color white
+				
+			
+.b27-texto
+	margin 36px 0
+	p
+		margin-top 10px
+		text-align justify
+		font-family t-7
+		font-size 13px
+		color #5c5c5f
+		line-height: 2
+		margin 0
+
+.b27-wrapper
+	margin-top 40px		
+
+.b27-item
+	&:first-child
+		padding-top 0
+		.b27-texto
+			display block
+
+.b27-texto	
+	padding 0 50px
+	display none
+	padding-right 6px
+	
+.b27-texto2
+	display none
+	margin-bottom 35px
+	li
+		font-size 12px
+	
+.b27-title2
+	position relative
+	margin-bottom 15px
+	&:before
+		content "\e608"
+		font-family icomoon
+		font-size 30px
+		position absolute
+		color #5c5c5f
+		right 2%
+		top -10px
+		color c-0
+		transition-all()
+	&:after
+		content ""
+		width 3px
+		height 3px
+		position absolute
+		background-color #5c5c5f
+		left -10px
+		top 0
+		bottom 0
+		margin auto
+		border-radius 50%
+
+.b27-pregunta
+	font-size 15px
+	line-height 19px
+	color #828282
+	position relative
+	padding 0 50px
+	cursor pointer
+	&:after
+		content "\e608"
+		position absolute
+		top 5px
+		right 5px
+		font-family: icomoon
+		font-size 30px
+		transition all .3s linear
+	&.active, &:hover
+		color #1174ce	
+		&:after
+			transform rotate(180deg)
+			
+@media screen and (max-width 1070px)
+	.b27-content
+		text-align center
+	.b27-table,
+	.b27-left
+		text-align left
+	.b27-table
+		margin-top 10px
+
+@media screen and (max-width 900px)
+	.b27-texto p
+		line-height 1.5
+	.b27-table
+		margin auto
+		text-align center
+		display block
+		width 100%
+	.b27-right
+		width 100%
+		display inline-block
+		width auto
+		margin 30px 0
+	.b27-left
+		width 100%
+
+@media screen and (max-width 530px)
+	.b27-azul
+		width 100%
+	.b27-insc
+		display block
+		width 100%
+		padding 0 30px
+		text-align center
+		&:before
+			height 2px
+			width 100%
+			left 0
+			right 0
+			top inherit
+			bottom 0
+			margin auto
+		h2
+			padding-top 15px
+	.b27-celeste
+		display block
+		width auto
+	.b27-dinero
+		display block
+		height auto
+		padding 13px 0
+		
+	.b27-left
+		width 91%
+		
+	.b27-right
+		width 100%
+		margin-bottom 10px
+	
+	.b27-texto
+		padding 0 20px
+	
+	.b27-content
+		margin-bottom 0
+		

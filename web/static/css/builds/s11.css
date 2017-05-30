@@ -1,0 +1,128 @@
+.cf {
+  zoom: 1;
+}
+.cf:after,
+.cf:before {
+  content: "";
+  display: table;
+}
+.cf:after {
+  clear: both;
+}
+.wrapper {
+  margin-top: 76px;
+}
+.b28 .g-tittle h3 {
+  color: #fff;
+}
+.b28 .g-tittle h3:before {
+  background-color: #fff;
+}
+.b11-tittle {
+  text-align: center;
+  font-size: 28px;
+  padding-top: 35px;
+}
+.b11-tittle h3:before {
+  width: 60px;
+  margin-bottom: -5px;
+}
+.b11-parrafo p {
+  margin-top: 25px;
+  color: #89878c;
+  font-family: 'arial', sans-serif;
+  line-height: 24px;
+}
+.b11-wrapper {
+  position: relative;
+  margin-top: 50px;
+  color: #fff;
+}
+.b11-wrapper-color {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  top: 0;
+  font-size: 0;
+  z-index: 1;
+}
+.b11-wrapper-color:before,
+.b11-wrapper-color:after {
+  content: "";
+  width: 50%;
+  height: 100%;
+  display: inline-block;
+}
+.b11-wrapper-color:after {
+  background-color: #004998;
+}
+.b11-wrapper-color:before {
+  background-color: #2388e2;
+}
+.b11-wrapper-texto {
+  z-index: 2;
+  position: relative;
+  font-size: 0;
+}
+.b11-block {
+  display: inline-block;
+  width: 50%;
+  vertical-align: top;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+.b11-block .g-tittle h3 {
+  color: #fff;
+  margin-bottom: 15px;
+}
+.b11-block p {
+  padding: 0px 25px 25px 25px;
+  line-height: 18px;
+  font-family: 'arial', sans-serif;
+  line-height: 24px;
+  text-align: justify;
+  font-size: 14px;
+  color: #fff;
+}
+.b11 .g-tittle h3:before {
+  margin-bottom: -5px;
+  width: 40px;
+}
+@media screen and (max-width: 768px) {
+  .b11-wrapper-color:after {
+    display: none;
+    content: none;
+  }
+  .b11-wrapper-color:before {
+    display: none;
+    content: none;
+  }
+  .b11-block {
+    display: block;
+    width: 100%;
+    background-color: #004998;
+  }
+  .b11-block:first-child {
+    background-color: #39b6e7;
+  }
+  .b11-wrapper .wancho {
+    width: 100%;
+  }
+  .b11-block {
+    padding: 0px 15px 25px 15px;
+  }
+  .b11-block p:last-child {
+    margin: 0 0 0 1px;
+  }
+}
+@media screen and (max-width: 480px) {
+  .b11-block {
+    padding: 0px 0px 0px 0px;
+  }
+  .b11-block p {
+    text-align: justify;
+    margin: 0;
+  }
+}

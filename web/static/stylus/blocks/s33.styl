@@ -1,0 +1,275 @@
+.b33 
+	padding 30px 0
+.b33-ultimo
+	background-color #f7f8f8
+	padding-bottom 30px
+.b33-titulo-ultimo
+	padding 30px 0
+	h3 
+		font-size 28px 
+		font-family t-0
+		color #5d5d5d
+		margin-bottom 0
+		position relative
+		padding-bottom 5px
+		&:after 
+			content "" 
+			position absolute
+			bottom -3px
+			left 0
+			height 2px 
+			width 50px 
+			background-color c-1
+	@media screen and (max-width 768px)
+		padding 20px
+		h3 
+			font-size 21px 
+	&.pink
+		h3 
+			&:after 
+				background-color  #b44fe9
+
+
+
+.b33-search-title
+	padding 20px 0
+	h3 
+		display inline-block
+		vertical-align middle
+		margin-bottom 0
+		font-size 21px 
+		color c-1 
+		font-family t-0
+	@media screen and (max-width 768px)
+		h3 
+			font-size 17px
+	&.pink
+		h3 
+			color #b44fe9
+	&.blue 
+		h3 
+			color c-1 
+.b33-no-slider
+	width 100%
+	.b33-item,
+	.b21-item
+		display inline-block
+		vertical-align top
+		width 31.5%
+		margin-left 2%
+		margin-bottom 2%
+		&:nth-child(3n + 1)
+			margin-left 0
+	
+	
+.b33-si-slider
+	.b33-item
+		display inline-block
+		vertical-align top
+		width 100%
+	.b21-item
+		display inline-block
+		vertical-align top
+		width 100%
+		margin-left 0
+	
+.b33-cnt-slider	
+	position relative
+	.owl-nav
+		width 100% 
+		position absolute
+		top 40% 
+	.owl-prev,
+	.owl-next
+		position absolute
+		font-size 0
+		&:before 
+			font-size 70px 
+			font-family icomoon 
+			color #5d5d5d
+		&:hover 
+			&:before
+				color #c3c3c3
+		&.disabled
+			&:before
+				color #c3c3c3
+	.owl-prev
+		right 100%
+		&:before 
+			content "\e607"
+	.owl-next
+		left 100% 
+		&:before 
+			content "\e606"
+
+
+.b33-box
+	padding 30px 15px
+	border 1px solid transparent 
+	transition all .3s
+	h3 
+		font-size 15px 
+		font-family t-0
+		color #434040
+		margin-bottom 0
+		line-height 1.4
+
+
+
+.b33-item,
+.b21-item
+	display inline-block
+	vertical-align top
+	width 31.99%
+	margin-left 2%
+	margin-bottom 2%
+	position relative
+	&:nth-child(3n + 1)
+		margin-left 0 
+	@media screen and (min-width 1025px)	
+		&:hover 
+			.b33-figure
+				figcaption
+					opacity 1
+					visibility visible 
+			.b33-box
+				background-color white
+				border-color #ddd
+	@media screen and (max-width 1024px)
+		.b33-figure
+			figcaption
+				opacity .7
+				visibility visible 
+		.b33-box
+			background-color white
+			border-color #ddd
+.b33-content
+	font-size 0
+	width 100%
+.b33-figure
+	position relative
+	width 100%
+	height 255px
+	background-size cover
+	background-position center center
+	figcaption
+		position absolute
+		width 100% 
+		height 100%
+		top 0
+		left 0
+		opacity  0
+		visibility hidden
+		transition background .3s , opacity .3s
+	i 
+		font-size 30px
+		color white 
+		display block
+		position absolute 
+		transition color .3s 
+		top 0 
+		left 0
+		right 0
+		bottom 0
+		margin auto 
+		width 30px 
+		height 30px
+
+.b33-figcaption
+	box-sizing border-box
+	width 100% 
+	height auto
+	transition all .3s
+	h3 
+		font-size 15px 
+		font-family t-0
+		color #434040
+		margin-bottom 0
+		line-height 1.4
+
+.b33-date
+	font-size 14px 
+	color #004998
+	display block
+	transition color .3s 
+	font-family t-11
+	padding-bottom 10px
+	
+.b33-pager
+	text-align center
+	width 100%
+	padding 10px 0
+
+.b33-cnt-pager
+	a 
+		display inline-block 
+		vertical-align middle
+		padding 0 5px
+		font-size 16px
+		color #5d5d5d
+		transition color .3s
+		&.active ,
+		&:hover 
+			color c-1
+	i 
+		font-size 20px
+		display block
+	.b33-prev,
+	.b33-next 
+		color #5d5d5d
+		&:hover ,
+		&.active
+			color black
+	&.pink 
+		a 
+			&.active ,
+			&:hover 
+				color #b44fe9
+@media screen and (max-width 1150px)
+	.b33-cnt-slider
+		.owl-dots
+			text-align center
+			padding 25px 0
+		.owl-dot
+			display inline-block
+			vertical-align top
+			width 18px
+			height 18px
+			border-radius 100%
+			background-color #d8dade
+			margin-left 10px
+			&.active
+				background-color #5d5d5d
+@media screen and (max-width 768px)
+	.b33
+		padding 20px 0
+	.b33-item,
+	.b21-item
+		width 49% 
+		&:nth-child(3n + 1)
+			margin-left 2%
+		&:nth-child(2n + 1)
+			margin-left 0
+	.b33-content
+		text-align center
+	
+@media screen and (max-width 480px)
+	.b33
+		padding 15px 0px
+	.b33-item,
+	.b21-item
+		width 100% 
+		margin-left 0
+		&:nth-child(3n + 1)
+			margin-left 0
+		&:nth-child(2n + 1)
+			margin-left 0
+	
+	.b33-figcaption
+		padding 10px
+		
+	.b33-figcaption
+		padding 10px 15px
+	
+	.b33-ultimo
+		padding-bottom 0px

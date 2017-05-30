@@ -1,0 +1,65 @@
+{% if app.request.attributes.get('_route') != '' %}
+    {% set url_seo = path(app.request.attributes.get('_route'),
+                        app.request.attributes.get('_route_params')) %}
+
+    {% set cur_route = app.request.attributes.get('_route') %}
+    {% set detalle_seo = url_seo|metatags %}
+    
+    {# general #}
+    <title>{{ detalle_seo.titulo|default(detalle.titulo|default(titulo|default(info.titulo)))|striptags|trim }}</title>
+    <meta name="description" CONTENT="{{ detalle_seo.descripcion|default(info.descripcion)|markdown|striptags|trim }}">
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="{{ app.request.getSchemeAndHttpHost()~url_seo }}" />
+
+    {% if detalle_seo.socialTitulo %}
+        <meta property="og:title" content="{{ detalle_seo.socialTitulo|trim }}" />
+    {% endif %}
+
+    {% if detalle_seo.socialDescripcion %}
+        <meta property="og:description" content="{{ detalle_seo.socialDescripcion|trim }}" />
+    {% endif %}
+
+    {% if detalle_seo.socialImagen %}
+        <meta property="og:image" content="{{ app.request.getSchemeAndHttpHost()~asset(detalle_seo.socialImagen) }}" />
+    {% endif %}
+
+    {% if cur_route == "novedad-detalle-ant" %} {# cpal antares #}
+        <title>{{ novedad.titulo|trim }}</title>
+        <meta property="og:title" content="{{ novedad.titulo|trim }}" />
+        <meta property="og:description" content="{{ novedad.descripcionBajoFecha|markdown|striptags|trim }}" />
+        <meta property="og:image" content="{{ app.request.getSchemeAndHttpHost()~asset(novedad.imagen) }}" />
+        <meta property="og:type" content="article" />
+    {% endif %}
+
+    {% if cur_route == "eventos-detalle-ant" %} {# cpal antares #}
+        <title>{{ ultimo.0.titulo|trim }}</title>
+        <meta property="og:title" content="{{ ultimo.0.titulo|trim }}" />
+        <meta property="og:description" content="{{ ultimo.0.contenido|markdown|striptags|trim }}" />
+        <meta property="og:image" content="{{ app.request.getSchemeAndHttpHost()~asset(ultimo.0.imagen) }}" />
+        <meta property="og:type" content="article" />
+    {% endif %}
+
+    {% if cur_route == "articulo-detalle-ant" %} {# cpal antares #}
+        <title>{{ articulo.titulo|trim }}</title>
+        <meta property="og:title" content="{{ articulo.titulo|trim }}" />
+        <meta property="og:description" content="{{ articulo.descripcionBajoTitulo|markdown|striptags|trim }}" />
+        <meta property="og:image" content="{{ app.request.getSchemeAndHttpHost()~asset(articulo.imagenDetalle) }}" />
+        <meta property="og:type" content="article" />
+    {% endif %}
+
+    {% if cur_route == "noticia-slug" %} {# cpal web #}
+        <title>{{ noticia.0.titulo|trim }}</title>
+        <meta property="og:title" content="{{ noticia.0.titulo|trim }}" />
+        <meta property="og:description" content="{{ noticia.0.resumen|markdown|striptags|trim }}" />
+        <meta property="og:image" content="{{ app.request.getSchemeAndHttpHost()~asset(noticia.0.imagen) }}" />
+        <meta property="og:type" content="article" />
+    {% endif %}
+
+    {% if cur_route == "blog-slug" %} {# cpal web #}
+        <title>{{ blog.titulo|trim }}</title>
+        <meta property="og:title" content="{{ blog.titulo|trim }}" />
+        <meta property="og:description" content="{{ blog.resumen|markdown|striptags|trim }}" />
+        <meta property="og:image" content="{{ app.request.getSchemeAndHttpHost()~asset(blog.imagen) }}" />
+        <meta property="og:type" content="article" />
+    {% endif %}
+{% endif %}

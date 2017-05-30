@@ -1,0 +1,161 @@
+<footer class="footer">
+	<div class="wancho">
+		<figure class="footer-img">
+			<img src="{{ asset('static_dt/media/logo-cpal-footer.png') }}" alt="">
+		</figure>
+		<div class="footer-items">
+			<div class="footer-item dn">
+				<div class="footer-list">
+					<div class="footer-list-title">
+						<h4>Acerca de</h4>
+					</div>
+					<ul class="footer-list-box">
+						<li>
+							<a href="{{ path('somosDt') }}">Quienes Somos</a>
+						</li>
+						<li>
+							<a href="{{ path('somosDt') }}#organigrama">Organigrama</a>
+						</li>
+						<li>
+							<a href="{{ path('somosDt') }}#especialistas">Especialistas</a>
+						</li>
+					</ul>
+				</div>
+				<div class="footer-list">
+					<div class="footer-list-title">
+						<h4>Diagnóstico</h4>
+					</div>
+					<ul class="footer-list-box">
+						<li>
+							<a href="">
+								Triage
+							</a>
+						</li>
+						<li>
+							<a href="{{ path('dt-diagnostico') }}#señales-alerta">
+								Señales de Alerta
+							</a>
+						</li>
+						<li>
+							<a href="{{ path('dt-diagnostico') }}#evaluaciones">
+								Evaluaciones
+							</a>
+						</li>
+						<li>
+							<a href="{{ path('dt-contacto') }}#solicitar-cita">
+								Solicitar Cita
+							</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+			<div class="footer-item dn">
+				<div class="footer-list">
+					<div class="footer-list-title">
+						<h4>Tratamiento</h4>
+					</div>
+					<ul class="footer-list-box">
+						<li>
+							<a href="{{ path('dt-tratamiento') }}#terapias">Terapias</a>
+						</li>
+						{# <li>
+							<a href="">Acompañamiento Familiar</a>
+						</li> #}
+						<li>
+							<a href="{{ path('dt-contacto') }}">Solicitar Cita</a>
+						</li>
+					</ul>
+				</div>
+				<div class="footer-list mb20">
+					<div class="footer-list-title">
+						<h4>Talleres</h4>
+					</div>
+				</div>
+				<div class="footer-list">
+					<div class="footer-list-title">
+						<h4>Despistajes</h4>
+					</div>
+					<ul class="footer-list-box">
+						{% for item in despistajes %}
+							<li>
+								<a href="{{ path('dt-despistajes' , {'slug': item.slug }) }}">
+									{{ item.nombre }}
+								</a>
+							</li>
+						{% endfor %}
+
+					</ul>
+				</div>
+			</div>
+			<div class="footer-item">
+				<div class="footer-list">
+					<div class="footer-informacion">}
+						<a href="{{ path('dt-contacto') }}">
+                            <h4>Solicitar <br> Información</h4>
+                            <i class="icon-solicitar"></i>
+                        </a>
+					</div>
+				</div>
+				<div class="footer-list">
+					<div class="footer-redes">
+						<a href="{{ infodt.facebook }}" class="icon-fb" target="_blank"></a>
+						<a href="{{ infodt.twitter }}" class="icon-twitter" target="_blank"></a>
+						<a href="{{ infodt.youtube }}" class="icon-youtube2" target="_blank"></a>
+					</div>
+				</div>
+			</div>
+			<div class="footer-item">
+				<div class="footer-datos">
+					<div class="footer-datos-box direccion">
+						<div class="footer-direccion">
+							<a href="{{ infodt.maps }}" class="footer-direccion-title" target="_blank">
+								<strong>Como llegar</strong>
+							</a>
+							<p>
+								{% set direccion = infodt.direccion|split('//') %}
+								{% if direccion.0 is defined %}{{ direccion.0 }}{% endif %} <br>
+									{% if direccion.1 is defined %} {{ direccion.1 }}{% endif %}
+							</p>
+						</div>
+					</div>
+					<div class="footer-datos-box telefonos">
+						<div class="footer-direccion">
+							<p class="footer-direccion-title">
+								<strong>Teléfonos</strong>
+							</p>
+							<p>
+								{% set telefono =  infodt.telefono|split(',') %}
+									{% for item in telefono %}
+										{% set tel = item|split('*') %}
+										<a href="tel:{{ tel.1 }}">{# TELÉFONO #} {{ tel.0 }}</a> {% if tel.1 is defined %}{{ tel.1 }}{% endif %}<br>
+									{% endfor %}
+
+								{% if infodt.fax %} Fax: {{ infodt.fax }} {% endif %}
+							</p>
+						</div>
+					</div>
+					<div class="footer-datos-box email">
+						<div class="footer-direccion">
+							<p class="footer-direccion-title">
+								<strong></strong>
+							</p>
+							<p>
+								<a href="mailto:{{ infodt.correoContacto }}">{{ infodt.correoContacto }}</a>
+							</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+	</div>
+
+	<!-- creditos -->
+	<section class="footer-copy">
+		<div class="wancho">
+			<div class="footer-copy-left">
+				<p> @CPAL <span id="id_year"></span> - Todos los derechos reservados. </p>
+			</div>
+		</div>
+	</section>
+</footer>

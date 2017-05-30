@@ -1,0 +1,144 @@
+<header class="header">
+    <div class="header-form-content">
+        <div class="wancho ">
+            <form>
+                <div class="header-input">
+                    <input class="validate[required]" type="text" name="busqueda" id="busqueda" placeholder="¿Que deseas buscar?">
+                    <button class="btn-search-buscador">BUSCAR</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <div class="wancho header-ctn">
+        <div class="header-box">
+            <a href="{{ path('es-home') }}" class="header-logo">
+                <img src="{{ asset('static_es/media/logo.png') }}" alt="" width="299" height="50">
+            </a>
+        </div>
+        <nav class="menu">
+            <div class="menu-wrap">
+                {% set seo_route = app.request.attributes.get('_route') %}
+
+                <ul class="menu-list"> <!-- "menu-list" es usado para el menu responsive -->
+                    <li class="menu-item no-mobile"><a href="{{ path('es-escuela') }}" class="{% if 'es-escuela' in seo_route|lower %}menu-link active{% else %}menu-link{% endif %}">La Escuela</a></li>
+                    <li class="menu-item no-mobile">
+                        <a href="" class="{% if 'es-maestria' in seo_route|lower %}menu-link maestria active{% else %}menu-link maestria{% endif %}">Maestrías</a>
+                        <div class="submenu-maestria">
+                            <ul>
+                                {% for item in maestriaHeader %}
+                                    <li class="mitad wancho">
+                                        <div class="submenu-maestria-container">
+                                            <div class="submenu-maestria-title">
+                                                <div class="h-icono-libro">
+                                                    <i class="icon-libro-2 h-icono"> </i>
+                                                </div>
+                                                <div class="h-title-menu">
+                                                        <a href="{{ path('es-maestria', { slug: item.slug }) }}">{{ item.nombreFormateado }}</a>
+
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </li>
+                                {% endfor %}
+                            </ul>
+                        </div>
+                    </li>
+                    <li class="menu-item no-mobile">
+                        <a href="" class="{% if 'es-diplomatura' in seo_route|lower %}menu-link diplomatura active{% else %}menu-link diplomatura{% endif %}">Diplomaturas</a>
+                        <div class="submenu-diplomatura ">
+                            <ul>
+                                {% for item in diplomaturaHeader %}
+                                    <li class="mitad wancho">
+                                        <div class="submenu-diplomatura-container">
+                                            <a class="submenu-diplomatura-title">{{ item.nombreFormateado }}</a>
+                                           {% for subitem in item.diplomaturas %}
+                                                <a href="{{ path('es-diplomatura', { slug1 : item.slug, slug2 : subitem.slug }) }}" class="submenu-item no-mobil">
+                                                    {{ subitem.nombreFormateado }}
+                                                </a>
+                                            {% endfor %}
+                                        </div>
+                                    </li>
+                                {% endfor %}
+                            </ul>
+                        </div>
+                    </li>
+                    <li class="menu-item no-mobile"><a href="{{ path('es-curso', {'slug' : primerCat.slug , 'curso' : primerCurso.slug}) }}" class="{% if 'es-curso' in seo_route|lower %}menu-link active{% else %}menu-link{% endif %}">Cursos</a></li>
+                    <li class="menu-item no-mobil">
+                        <a href="" class="menu-link icon-lupa lupa icon noafter"></a>
+                    </li>
+                    <li class="menu-item no-mobil">
+                        <a href="{{ path('home') }}" class="menu-link icon-casa  icon noafter"></a>
+                    </li>
+                    <li class="menu-item displaynone">
+                        <a href="" class="menu-link  icon hamburguesa no-mobil">
+                            <span class="icon-oc"></span>
+                        </a>
+                        <div class="submenu">
+                            <div class="wancho">
+                                <ul class="">
+                                    <li>
+                                        <a href="{{ path('es-programas') }}">Nuestros Programas</a>
+                                    </li>
+                                    <li>
+                                        <a href="{{ path('es-proyectos', { slug : proyectoHeader.0.slug }) }}">Proyectos especiales</a>
+                                    </li>
+                                    <li>
+                                        <a href="{{ path('noticias') }}" target="_blank">Novedades</a>
+                                    </li>
+                                    <li>
+                                        <a href="{{ path('eventos') }}" target="_blank">Eventos</a>
+                                    </li>
+                                    <li>
+                                        <a href="{{ path('blog') }}" target="_blank">Blog</a>
+                                    </li>
+                                    <li>
+                                        <a href="{{ path('es-contacto') }}">Contáctanos</a>
+                                    </li>
+                                </ul>
+                                <ul class="recursos">
+                                    <li class="no-mobil">
+                                        <a href="">Recursos</a>
+                                    </li>
+                                    <li>
+                                        <a href="{{ info.aulaVirtual }}" class="header-boton" target="_blank">
+                                            Aula Virtual
+                                        </a>
+                                        <a href="{{ infoes.intranet }}" class="header-boton" target="_blank">
+                                            Intranet ICPE
+                                        </a>
+                                        <a href="{{ infoes.intranet }}" class="header-boton" target="_blank">
+                                            Intranet Maestría
+                                        </a>
+                                        <a href="{{ info.bibliotecaLink }}" class="header-boton" target="_blank">
+                                            Biblioteca
+                                        </a>
+                                    </li>
+                                    <li class="header-redes-box">
+                                        <p class="mr">
+                                            Síguenos
+                                        </p>
+                                        <a href="{{ infoes.twitter }}" target="_blank" class="header-redes">
+                                            <span class="icon-twitter"></span>
+                                        </a>
+                                        <a href="{{ infoes.facebook }}" target="_blank" class="header-redes">
+                                            <span class="icon-fb"></span>
+                                        </a>
+                                        <a href="{{ infoes.youtube }}" target="_blank" class="header-redes">
+                                            <span class="icon-youtube2"></span>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+        <!--<a href="" class="menu-buscar icon-lupa lupa dn">
+        </a>-->
+    </div>
+
+    <div  class="menu-mobile-open icon-menu"></div>
+
+</header>

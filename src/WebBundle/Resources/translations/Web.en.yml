@@ -1,0 +1,18 @@
+global:
+    block:
+        home: Inicio
+        company: Empresa
+        equipment: Equipos & soluciones
+        marketplace: Mercados
+        new: Noticias
+        contact: Contacto
+        copyright: Todos los derechos reservados
+
+home:
+    btnmore: Ver más
+    btnabout: Conócenos más
+    btnmovie: Ver video
+    new: Noticias & novedades
+company:
+    btnmore: Ver más
+    btnabout: Conócenos nuestra trayectoria

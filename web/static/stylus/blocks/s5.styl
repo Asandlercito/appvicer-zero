@@ -1,0 +1,190 @@
+.b5
+	font-size 0
+	
+.b5-eventos
+	display table-cell
+	width 2000px
+	vertical-align middle
+	height 620px
+	position relative
+	background url(../media/b5img.jpg) center center no-repeat
+	background-size cover
+	.b5-contenedor
+		margin-left 50%
+		margin-right auto
+	
+.b5-contenedor
+	margin-right 20%
+	max-width 420px
+	
+.b5-title
+	margin-bottom 10px
+	h3
+		font-family t-2
+		font-size 45px
+		color #fff
+		position relative
+		display inline-block
+		&:before
+			content ""
+			width 50px
+			height 3px
+			background #fff
+			position absolute
+			bottom -12px
+			right 0px
+
+.b5-meses
+	width 45px
+	height 70px
+	background #fff
+	display inline-block
+	vertical-align bottom
+	margin-top 30px
+	box-sizing border-box
+	padding-top 23px
+
+.b5-chiclayo
+	font-family t-4
+	font-size 20px
+	color #5d0c91
+	display block
+	text-align center
+
+.b5-taller
+	display inline-block
+	vertical-align bottom
+	margin-top 50px
+	width 280px
+	p
+		font-family t-0
+		font-size 14px
+		color #fff
+		line-height 1.6
+		margin-left 15px
+		margin-bottom 0
+
+.b5-blog
+	display table-cell
+	width 2000px
+	vertical-align middle
+	height 630px
+	background url(../media/b5img2.jpg) center center no-repeat
+	position relative
+	background-size cover
+	.aprendizaje
+		margin-left 15px
+		margin-top 34px
+		h3
+			font-family t-2
+			font-size 15px
+			color #fff
+			padding-left 18px
+	.b5-contenedor
+		margin-right inherit
+		margin-left 10%
+	
+.b5-enero
+	font-family t-4
+	font-size 20px
+	color #b550ea
+	display block
+	text-align center
+
+.b5-bnt
+	margin-top 40px
+	text-align center
+	.g-bnt
+		border 2px solid #fff
+		color #fff
+		margin auto
+		padding 0 15px
+		font-size 16px
+		font-family t-0
+		transition-all()
+		&:hover
+			background white
+			color c-18
+
+.b5-content
+	margin-left 70px
+
+@media screen and (max-width 1435px)
+	.b5-eventos
+		.b5-contenedor
+			margin-left 30%
+
+@media screen and (max-width 1100px)
+	.b5-eventos
+		.b5-contenedor
+			margin-left 20%
+
+@media screen and (max-width 960px)
+	.b5-blog
+		.b5-contenedor
+			margin-left 10%
+	.b5-eventos
+		.b5-contenedor
+			margin-left 10%
+
+@media screen and (max-width 900px)
+	.b5-title
+		margin-top 35px
+		margin-bottom 0
+
+	.b5-title h3
+		font-size  45px
+
+	.b5-blog .aprendizaje
+		margin-left 0
+
+	.b5-bnton
+		margin-top 20px
+
+	.b5-bnton .g-bnt
+		margin auto
+		
+	.b5-eventos, .b5-blog
+		width 100%
+		display block
+		height auto
+		padding 50px 0px
+		.b5-contenedor
+			margin auto	
+
+@media screen and (max-width 480px)
+	.b5-title
+		text-align center
+		margin-top 0px
+	.b5-taller
+		width 100%
+		margin-top 10px
+		p
+			margin 0px
+	.b5-blog .aprendizaje h3
+		font-size  13px
+	.b5-bnt
+		margin-top 20px
+	.b5-bnton
+		margin-top 10px
+	.b5-title h3
+		font-size 35px
+		text-align left
+		&:before
+			bottom -10px
+	.b5-meses
+		width 40px
+		
+	.b5-meses
+		display block
+		margin auto
+		// margin-top 40px
+		margin-top 25px
+	
+	.b5-taller
+		margin-top 20px
+	
+	.b5-carreras
+		text-align center
+	.b5-eventos, .b5-blog
+		padding 20px 0px

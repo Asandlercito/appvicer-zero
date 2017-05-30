@@ -1,0 +1,185 @@
+<footer class="footer">
+	<div class="wancho">
+		<figure class="footer-img">
+			<img src="{{ asset('static_es/media/cpal-footer.png') }}" alt="">
+		</figure>
+
+		<div class="footer-items">
+			<div class="footer-item dn">
+				<div class="footer-list">
+					<div class="footer-list-title">
+						<h4>La escuela</h4>
+					</div>
+					<ul class="footer-list-box">
+						<li>
+							<a href="/estudios-superiores/escuela/#acerca_de">Acerca de</a>
+						</li>
+						<li>
+							<a href="/estudios-superiores/escuela/#historia">Historia</a>
+						</li>
+						<li>
+							<a href="/estudios-superiores/escuela/#autoridades">Autoridades</a>
+						</li>
+						<li>
+							<a href="/estudios-superiores/escuela/#egresados_exitosos">Egresados Exitosos</a>
+						</li>
+					</ul>
+				</div>
+				<div class="footer-list">
+					<div class="footer-list-title">
+						<h4>Maestrías</h4>
+					</div>
+					<ul class="footer-list-box">
+						{% for item in maestriaHeader %}
+							<li>
+								<a href="{{ path('es-maestria', { slug : item.slug }) }}">
+									{{ item.nombreFormateado }}
+								</a>
+							</li>
+						{% endfor %}
+					</ul>
+				</div>
+			</div>
+			<div class="footer-item dn">
+				<div class="footer-list">
+					<div class="footer-list-title">
+						<h4>Cursos</h4>
+					</div>
+					<ul class="footer-list-box">
+						{% set primer = '' %}
+						{% for item in cursoHeader %}
+							{% for i in item.cursos %}
+								{% if loop.index == 1 %} {% set primer = i.slug %} {% endif %}
+							{% endfor %}
+
+							<li>
+								<a href="{{ path('es-curso', { slug : item.slug, curso : primer }) }}">{{ item.nombre }}</a>
+							</li>
+						{% endfor %}
+					</ul>
+				</div>
+				<div class="footer-list">
+					<div class="footer-list-title">
+						<h4>Diplomaturas</h4>
+					</div>
+					<ul class="footer-list-box">
+						{% for item in diplomaturaHeader %}
+							<li>
+								<a href="{{ path('es-diplomatura', { slug1: item.slug, slug2: item.diplomaturas.0.slug }) }}">
+									{% set nombre = item.nombreFooter|split("//") %}
+									{{ nombre.0 }}
+
+									{% if nombre.1 is defined %}
+										<br> {{ nombre.1 }}
+									{% endif %}
+								</a>
+							</li>
+						{% endfor %}
+					</ul>
+				</div>
+			</div>
+			<div class="footer-item">
+				<div class="footer-list libro dn">
+					<div class="footer-list-title">
+						<h4>Proyectos especiales</h4>
+					</div>
+					<ul class="footer-list-box">
+						{% for item in proyectoHeader %}
+							<li>
+								<a href="{{ path('es-proyectos', { slug : item.slug }) }}">{{ item.nombre }}</a>
+							</li>
+						{% endfor %}
+					</ul>
+				</div>
+
+
+				{# <div class="footer-list">
+					<a href="{{ path('es-libro-reclamaciones') }}" class="libro-recla">
+						<span class="icon-libro"></span>
+						<p class="libro-recla">Libro de Reclamaciones</p>
+					</a>
+				</div> #}
+
+
+			</div>
+			<div class="footer-item">
+				<div class="footer-datos">
+					<div class="footer-datos-box direccion">
+						<div class="footer-direccion">
+
+
+								<div class="f-como-llegar">
+								<a href="{{ infoes.maps }}" target="_blank"> <strong>CÓMO LLEGAR</strong></a>
+
+								</div>
+
+							{% set direccion = infoes.direccion|split('//') %}
+
+                            {% if direccion.0 is defined %}
+
+                            <p> {{ direccion.0 }} {% endif %}<br>
+                                {% if direccion.1 is defined %}
+                                    {{ direccion.1 }}
+                                {% endif %}
+                            </p>
+						</div>
+					</div>
+					<div class="footer-datos-box telefonos">
+						<div class="footer-direccion">
+							<p class="footer-direccion-title">
+								<strong></strong>
+							</p>
+							<p>
+								{% set cleanNumber = infoes.telefono|replace({ '(' : '', ')' : '', ' ' : '', '-' : '' }) %}
+
+									{% set telefonos = cleanNumber|split(',') %}
+
+										{# {{ dump(telefonos) }} #}
+								{% for item in telefonos %}
+									<a class="footer_telf" href="tel:{{ item }}">TÉLEFONO: {{ item }}</a>  <br>
+								{% endfor %}
+
+                               	{% if infoes.fax %} Fax: {{ infoes.fax }} {% endif %}
+							</p>
+						</div>
+					</div>
+					<div class="footer-datos-box email">
+						<div class="footer-direccion">
+							<p class="footer-direccion-title">
+								<strong></strong>
+							</p>
+							<p>
+
+									<div class="mail-footer">
+										{% set correos = infoes.correoContacto|split(',') %}
+
+										{% for item in correos %}
+											<a href="mailto: {{ item }}"> {{ item }} </a>
+										{% endfor %}
+
+
+									</div>
+
+							</p>
+						</div>
+					</div>
+				</div>
+				<div class="footer-redes">
+                    <a href="{{ infoes.facebook }}" class="icon-fb" target="_blank"></a>
+                    <a href="{{ infoes.twitter }}" class="icon-twitter" target="_blank"></a>
+                    <a href="{{ infoes.youtube }}" class="icon-youtube2" target="_blank"></a>
+				</div>
+			</div>
+		</div>
+
+	</div>
+
+	<!-- creditos -->
+	<section class="footer-copy">
+		<div class="wancho">
+			<div class="footer-copy-left">
+				<p> CPAL - Todos los derechos reservados. </p>
+			</div>
+		</div>
+	</section>
+</footer>

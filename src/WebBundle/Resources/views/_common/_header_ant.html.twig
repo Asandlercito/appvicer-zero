@@ -1,0 +1,131 @@
+<header class="header">
+
+    <div class="header-form-content">
+        <div class="wancho ">
+            <form>
+                <div class="header-input">
+                    <input class="validate[required]" type="text" name="busqueda" id="busqueda" placeholder="¿Que deseas buscar?">
+                    <button class="btn-search-buscador">BUSCAR</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <div class="wancho header-ctn">
+        <div class="header-box">
+            <a href="{{ path('home-ant') }}" class="header-logo">
+                <img src="{{ asset('static_ant/img/cpal-antares.png') }}" alt="">
+            </a>
+        </div>
+        <nav class="menu">
+            <div class="menu-wrap">
+                {% set seo_route = app.request.attributes.get('_route') %}
+
+                <ul class="menu-list"> <!-- "menu-list" es usado para el menu responsive -->
+                    <li class="menu-item no-mobile">
+                        <a href="{{ path('somos-ant') }}" class="{% if 'somos-ant' in seo_route|lower %}menu-link active{% else %}menu-link{% endif %}">Acerca de</a>
+                    </li>
+                    <li class="menu-item no-mobile">
+                        <a href="{{ path('admision-ant' , {slug: primerTipo}) }}" class="{% if 'admision-ant' in seo_route|lower %}menu-link active{% else %}menu-link{% endif %}">Admisión</a>
+                    </li>
+                    <li class="menu-item no-mobile">
+                        <a href="{{ path('academico-ant', {slug: primerPrograma }) }}" class="{% if 'academico-ant' in seo_route|lower %}menu-link active{% else %}menu-link{% endif %}">Académico</a>
+                    </li>
+                   {#  <li class="menu-item no-mobile">
+                        <a href="{{ path('academico-ant', {slug: 'programa-educativo'}) }}" class="menu-link header-br">Programa <br>Educativo</a>
+                    </li> #}
+                    <li class="menu-item no-mobile no-tablet">
+                        <a href="{{ path('ant-contacto') }}" class="{% if 'ant-contacto' in seo_route|lower %}menu-link active{% else %}menu-link{% endif %}">Contáctanos</a>
+                    </li>
+
+                    <li class="menu-item no-mobil">
+                        <a href="" class="menu-link icon-lupa lupa icon noafter"></a>
+                    </li>
+                    <li class="menu-item no-mobil">
+                        <a href="{{ path('home') }}" class="menu-link icon-casa2  icon noafter"></a>
+                    </li>
+
+                    <li class="menu-item">
+                        <a href="" class="menu-link  icon hamburguesa no-mobil">
+                            <span class="icon-oc"></span>
+                        </a>
+                        <div class="submenu">
+                            <div class="wancho">
+                                <ul class="">
+                                    <li>
+                                        <a href="{{ path('novedades-ant') }}">Novedades</a>
+                                    </li>
+                                    <li>
+                                        <a href="{{ path('eventos-ant') }}">Eventos</a>
+                                    </li>
+                                    <li>
+                                        <a href="{{ path('articulos-ant') }}">Artículos</a>
+                                    </li>
+                                    <li>
+                                        <a href="{{ path('psicopedagogico-ant', {slug: primerPsico}) }}">Departamento Psicopedagógico</a>
+                                    </li>
+                                    <li>
+                                        <a href="{{ path('academico-ant', {slug: 'actividades-extracurriculares'}) }}">Actividades extracurriculares</a>
+                                    </li>
+                                    <li>
+                                        <a href="{{ path('testimonios-ant') }}">Testimonios</a>
+                                    </li>
+                                </ul>
+                                <ul class="recursos">
+                                    <li class="no-mobil">
+                                        <a href="{{ path('recursos-ant') }}">Recursos</a>
+                                    </li>
+                                    <li>
+                                        <a href="{{ infoant.intranet }}" class="header-boton" target="_blank">
+                                            Intranet
+                                        </a>
+                                        <a href="{{ path('publicaciones-ant', { slug: 'guias' }) }}" class="header-boton">
+                                            Publicaciones
+                                        </a>
+                                    </li>
+                                    <li class="header-redes-box">
+                                        <p class="mr no-mobil">
+                                            Síguenos
+                                        </p>
+                                        <a href="{{ infoant.twitter }}" class="header-redes" target="_blank">
+                                            <span class="icon-twitter"></span>
+                                        </a>
+                                        <a href="{{ infoant.facebook }}" class="header-redes" target="_blank">
+                                            <span class="icon-fb"></span>
+                                        </a>
+                                        <a href="{{ infoant.youtube }}" class="header-redes" target="_blank">
+                                            <span class="icon-youtube2"></span>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </div>
+
+
+    <div  class="menu-mobile-open icon-menu"></div>
+
+    {% set url_route = app.request.attributes.get('_route') %}
+
+    {% if url_route != "" %}
+        {% set url_path = path(app.request.attributes.get('_route'), app.request.attributes.get('_route_params')) %}
+        <div class="header-redes-fixed">
+            <a href="javascript: void(0);" target="_blank" onclick="shareSocial(this, 'facebook', '{{ infosite }}{{ url_path }}')" class="icon-fb"></a>
+            <a href="javascript: void(0);" target="_blank" onclick="shareSocial(this, 'twitter', '{{ infosite }}{{ url_path }}')" class="icon-twitter"></a>
+            <a href="javascript: void(0);" onclick="shareSocial(this, 'googlemas', '{{ infosite }}{{ url_path }}')" class="icon-google-plus"></a>
+            <a href="javascript:window.print()" class="icon-impresora"></a>
+            <a href="#pop" class="open-boxlight"> <i class="icon-avion"></i></a>
+            <!-- <a href="javascript: void(0);" onclick="shareSocial(this, 'googlemas', '{{ infosite }}{{ url_path }}')" class="icon-icono-compartir"></a> -->
+        </div>
+    {% endif %}
+</header>
+<div class="header-cita">
+    <a href="">
+        <strong>Solicitar</strong> <br>
+        Cita
+    </a>
+</div>

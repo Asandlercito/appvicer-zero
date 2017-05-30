@@ -1,0 +1,58 @@
+.cf {
+  zoom: 1;
+}
+.cf:after,
+.cf:before {
+  content: "";
+  display: table;
+}
+.cf:after {
+  clear: both;
+}
+.wrapper {
+  margin-top: 76px;
+}
+.b7 {
+  position: relative;
+  padding-top: 50px;
+  padding-bottom: 40px;
+}
+.b7 .wancho {
+  position: relative;
+}
+.b7 .wancho:before {
+  content: "";
+  position: absolute;
+  background: url("../img/b7.png") center center no-repeat;
+  left: -100px;
+  top: -130px;
+  width: 210px;
+  height: 225px;
+}
+.b7-parrafo p,
+.b7-parrafo span {
+  font-family: 'arial', sans-serif;
+  font-size: 13px;
+  color: #727277;
+  padding-left: 30px;
+  line-height: 2;
+}
+.b7-parrafo strong {
+  font-family: 'Conv_Poppins-Medium', sans-serif;
+  font-size: 13px;
+  color: #003772;
+  margin-right: 15px;
+}
+.b7-strong {
+  text-align: center;
+}
+@media screen and (max-width: 768px) {
+  .b7-parrafo {
+    text-align: center;
+  }
+  .b7-parrafo span,
+  .b7-parrafo p {
+    display: block;
+    padding-left: 0;
+  }
+}
